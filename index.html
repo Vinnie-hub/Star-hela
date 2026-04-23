@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ═══════ SEO META TAGS ═══════ -->
     <title>Starhela — Earn Money Online | Get Paid for Tasks Worldwide</title>
     <meta
       name="description"
@@ -19,7 +18,6 @@
     <meta name="theme-color" content="#6d28d9" />
     <link rel="canonical" href="https://www.starhela.com/" />
 
-    <!-- ═══════ Open Graph / Facebook ═══════ -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.starhela.com/" />
     <meta
@@ -33,7 +31,6 @@
     <meta property="og:image" content="https://www.starhela.com/og-image.jpg" />
     <meta property="og:site_name" content="Starhela" />
 
-    <!-- ═══════ Twitter Card ═══════ -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@StarhelaHQ" />
     <meta
@@ -49,22 +46,16 @@
       content="https://www.starhela.com/og-image.jpg"
     />
 
-    <!-- ═══════ Structured Data (JSON-LD) ═══════ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Starhela",
         "url": "https://www.starhela.com",
-        "description": "The world's leading online earning platform. Complete tasks and earn money instantly.",
+        "description": "The world's leading online earning platform.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Web Browser",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "Free to join and earn"
-        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "publisher": {
           "@type": "Organization",
           "name": "Starhela Ltd",
@@ -79,14 +70,12 @@
       }
     </script>
 
-    <!-- ═══════ FAVICON ═══════ -->
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='50%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='50%25' stop-color='%236d28d9'/%3E%3Cstop offset='100%25' stop-color='%234c1d95'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230d0b1c'/%3E%3Cpolygon points='32,6 38.5,22.5 56,22.5 42.5,33.5 48,50 32,40 16,50 21.5,33.5 8,22.5 25.5,22.5' fill='url(%23bg)' opacity='0.95'/%3E%3C/svg%3E"
     />
 
-    <!-- ═══════ Fonts ═══════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -96,11 +85,11 @@
 
     <style>
       /* ═══════════════════════════════════════════════
-   DESIGN SYSTEM
-═══════════════════════════════════════════════ */
+         DESIGN SYSTEM
+      ═══════════════════════════════════════════════ */
       :root {
         --sidebar-w: 252px;
-        --topbar-h: 64px;
+        --topbar-h: 60px;
         --radius: 16px;
         --radius-sm: 10px;
         --radius-xs: 7px;
@@ -108,7 +97,6 @@
         --t-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         --max-content-w: 1600px;
 
-        /* Brand */
         --brand: #6d28d9;
         --brand-mid: #7c3aed;
         --brand-lt: #8b5cf6;
@@ -131,26 +119,26 @@
         --border: rgba(139, 92, 246, 0.14);
         --border-2: rgba(255, 255, 255, 0.06);
         --txt: #f0ecff;
-        --txt-2: #9b91c8;
-        --txt-3: #4d4778;
+        --txt-2: #b8b0de;
+        --txt-3: #6b6496;
         --shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
         --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.55);
       }
 
       [data-theme="light"] {
-        --bg: #f5f4fc;
-        --bg-2: #eeedf8;
+        --bg: #f3f2fb;
+        --bg-2: #eae9f7;
         --bg-3: #ffffff;
         --bg-4: #f8f7fe;
         --surface: #ffffff;
-        --surface-2: #f0effe;
-        --border: rgba(109, 40, 217, 0.12);
-        --border-2: rgba(0, 0, 0, 0.07);
-        --txt: #1a1535;
-        --txt-2: #5b5280;
-        --txt-3: #b0a8cc;
-        --shadow: 0 4px 20px rgba(109, 40, 217, 0.08);
-        --shadow-lg: 0 12px 48px rgba(109, 40, 217, 0.13);
+        --surface-2: #eeecfc;
+        --border: rgba(109, 40, 217, 0.15);
+        --border-2: rgba(0, 0, 0, 0.09);
+        --txt: #111028;
+        --txt-2: #3d3565;
+        --txt-3: #7d74a8;
+        --shadow: 0 4px 20px rgba(109, 40, 217, 0.09);
+        --shadow-lg: 0 12px 48px rgba(109, 40, 217, 0.14);
       }
 
       *,
@@ -163,6 +151,7 @@
       html {
         scroll-behavior: smooth;
         font-size: 16px;
+        -webkit-text-size-adjust: 100%;
       }
       body {
         font-family: "DM Sans", sans-serif;
@@ -173,6 +162,8 @@
         transition:
           background var(--t-slow),
           color var(--t-slow);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       a {
         text-decoration: none;
@@ -215,8 +206,8 @@
       }
 
       /* ═══════════════════════════════════════════════
-   LAYOUT
-═══════════════════════════════════════════════ */
+         LAYOUT
+      ═══════════════════════════════════════════════ */
       .app-shell {
         display: flex;
         min-height: 100vh;
@@ -224,8 +215,8 @@
       }
 
       /* ═══════════════════════════════════════════════
-   SIDEBAR
-═══════════════════════════════════════════════ */
+         SIDEBAR
+      ═══════════════════════════════════════════════ */
       .sidebar {
         width: var(--sidebar-w);
         min-width: var(--sidebar-w);
@@ -303,9 +294,9 @@
         color: var(--txt-3);
         letter-spacing: 0.03em;
         margin-top: 1px;
+        font-weight: 500;
       }
 
-      /* Globe badge replacing KE flag */
       .globe-badge {
         margin-left: auto;
         display: flex;
@@ -316,13 +307,10 @@
         border-radius: 20px;
         padding: 3px 9px;
         font-size: 0.6rem;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--txt-2);
         flex-shrink: 0;
         white-space: nowrap;
-      }
-      .globe-badge svg {
-        opacity: 0.7;
       }
 
       nav {
@@ -347,7 +335,7 @@
         padding: 9px 14px 9px 20px;
         color: var(--txt-2);
         font-size: 0.84rem;
-        font-weight: 500;
+        font-weight: 600;
         border-radius: 0 10px 10px 0;
         margin-right: 12px;
         position: relative;
@@ -427,14 +415,15 @@
         flex-shrink: 0;
       }
       .s-info .s-name {
-        font-size: 0.78rem;
+        font-size: 0.8rem;
         font-weight: 700;
         color: var(--txt);
       }
       .s-info .s-status {
-        font-size: 0.6rem;
+        font-size: 0.62rem;
         color: var(--green);
         margin-top: 1px;
+        font-weight: 600;
       }
       .s-info .s-status::before {
         content: "● ";
@@ -447,11 +436,12 @@
         text-align: center;
         border-top: 1px solid var(--border-2);
         flex-shrink: 0;
+        font-weight: 500;
       }
 
       /* ═══════════════════════════════════════════════
-   MAIN AREA
-═══════════════════════════════════════════════ */
+         MAIN AREA
+      ═══════════════════════════════════════════════ */
       .main-area {
         flex: 1;
         min-width: 0;
@@ -460,8 +450,8 @@
       }
 
       /* ═══════════════════════════════════════════════
-   TOPBAR
-═══════════════════════════════════════════════ */
+         TOPBAR
+      ═══════════════════════════════════════════════ */
       .topbar {
         position: sticky;
         top: 0;
@@ -471,8 +461,8 @@
         border-bottom: 1px solid var(--border);
         display: flex;
         align-items: center;
-        padding: 0 28px;
-        gap: 12px;
+        padding: 0 20px;
+        gap: 10px;
         backdrop-filter: blur(16px);
         transition:
           background var(--t-slow),
@@ -484,8 +474,13 @@
         background: none;
         border: none;
         color: var(--txt);
-        padding: 4px;
-        border-radius: 6px;
+        padding: 6px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        transition: background var(--t);
+      }
+      .hamburger:hover {
+        background: var(--surface-2);
       }
 
       .search-wrap {
@@ -509,7 +504,8 @@
         border-radius: 24px;
         padding: 0 16px 0 38px;
         font-family: "DM Sans", sans-serif;
-        font-size: 0.83rem;
+        font-size: 0.85rem;
+        font-weight: 500;
         color: var(--txt);
         outline: none;
         transition:
@@ -518,6 +514,7 @@
       }
       .search-wrap input::placeholder {
         color: var(--txt-3);
+        font-weight: 400;
       }
       .search-wrap input:focus {
         border-color: var(--brand-lt);
@@ -527,8 +524,9 @@
       .topbar-right {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         margin-left: auto;
+        flex-shrink: 0;
       }
 
       .earn-ticker {
@@ -536,11 +534,11 @@
         align-items: center;
         gap: 7px;
         background: rgba(16, 185, 129, 0.1);
-        border: 1px solid rgba(16, 185, 129, 0.2);
+        border: 1px solid rgba(16, 185, 129, 0.25);
         border-radius: 20px;
         padding: 5px 13px;
-        font-size: 0.73rem;
-        font-weight: 600;
+        font-size: 0.76rem;
+        font-weight: 700;
         color: var(--green);
         white-space: nowrap;
       }
@@ -550,6 +548,7 @@
         border-radius: 50%;
         background: var(--green);
         animation: tickerBlink 1.8s ease-in-out infinite;
+        flex-shrink: 0;
       }
       @keyframes tickerBlink {
         0%,
@@ -648,19 +647,20 @@
         flex-shrink: 0;
       }
       .u-name-block .u-name {
-        font-size: 0.78rem;
-        font-weight: 600;
+        font-size: 0.8rem;
+        font-weight: 700;
         color: var(--txt);
         line-height: 1.2;
       }
       .u-name-block .u-earn {
-        font-size: 0.62rem;
+        font-size: 0.64rem;
         color: var(--green);
+        font-weight: 600;
       }
 
       /* ═══════════════════════════════════════════════
-   CONTENT BODY
-═══════════════════════════════════════════════ */
+         CONTENT BODY
+      ═══════════════════════════════════════════════ */
       .content-body {
         flex: 1;
         display: grid;
@@ -670,22 +670,22 @@
       }
 
       .center-col {
-        padding: 28px 24px 48px 28px;
+        padding: 24px 20px 48px 24px;
         min-width: 0;
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 28px;
       }
 
       .right-col {
-        padding: 28px 28px 48px 8px;
+        padding: 24px 24px 48px 8px;
         position: sticky;
         top: var(--topbar-h);
         height: calc(100vh - var(--topbar-h));
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
         border-left: 1px solid var(--border-2);
         min-width: 0;
       }
@@ -698,28 +698,28 @@
       }
 
       /* ═══════════════════════════════════════════════
-   SECTION HEADING
-═══════════════════════════════════════════════ */
+         SECTION HEADING
+      ═══════════════════════════════════════════════ */
       .sec-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
       .sec-head h2 {
         font-family: "Syne", sans-serif;
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--txt-3);
       }
       .see-all {
-        font-size: 0.73rem;
-        font-weight: 600;
+        font-size: 0.74rem;
+        font-weight: 700;
         color: var(--brand-lt);
         padding: 4px 12px;
-        border: 1px solid rgba(139, 92, 246, 0.25);
+        border: 1px solid rgba(139, 92, 246, 0.3);
         border-radius: 20px;
         transition: all var(--t);
       }
@@ -730,21 +730,21 @@
       }
 
       /* ═══════════════════════════════════════════════
-   STATS GRID
-═══════════════════════════════════════════════ */
+         STATS GRID
+      ═══════════════════════════════════════════════ */
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 14px;
+        gap: 12px;
       }
       .stat-card {
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius);
-        padding: 18px 16px;
+        padding: 16px 14px;
         display: flex;
         align-items: flex-start;
-        gap: 12px;
+        gap: 11px;
         transition:
           transform var(--t),
           border-color var(--t),
@@ -771,36 +771,36 @@
         box-shadow: var(--shadow);
       }
       .sc-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.1rem;
+        font-size: 1rem;
         flex-shrink: 0;
       }
       .sci-1 {
-        background: rgba(6, 182, 212, 0.12);
+        background: rgba(6, 182, 212, 0.14);
       }
       .sci-2 {
-        background: rgba(245, 158, 11, 0.12);
+        background: rgba(245, 158, 11, 0.14);
       }
       .sci-3 {
-        background: rgba(16, 185, 129, 0.12);
+        background: rgba(16, 185, 129, 0.14);
       }
       .sci-4 {
-        background: rgba(168, 85, 247, 0.12);
+        background: rgba(168, 85, 247, 0.14);
       }
       .sc-label {
-        font-size: 0.67rem;
+        font-size: 0.68rem;
         color: var(--txt-2);
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 4px;
       }
       .sc-val {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 700;
         color: var(--txt);
         line-height: 1;
@@ -810,19 +810,19 @@
         text-overflow: ellipsis;
       }
       .sc-delta {
-        font-size: 0.63rem;
-        font-weight: 600;
+        font-size: 0.65rem;
+        font-weight: 700;
         color: var(--green);
       }
 
       /* ═══════════════════════════════════════════════
-   WELCOME BANNER (Kenya-specific for this user)
-═══════════════════════════════════════════════ */
+         WELCOME BANNER
+      ═══════════════════════════════════════════════ */
       .welcome-banner {
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 32px 32px;
+        padding: 28px 28px;
         position: relative;
         overflow: hidden;
         display: flex;
@@ -883,7 +883,8 @@
         display: flex;
         align-items: center;
         gap: 7px;
-        font-size: 0.75rem;
+        font-size: 0.78rem;
+        font-weight: 600;
         color: var(--txt-2);
         margin-bottom: 6px;
       }
@@ -900,22 +901,23 @@
       }
       .wb-title {
         font-family: "Syne", sans-serif;
-        font-size: 1.75rem;
+        font-size: 1.65rem;
         font-weight: 800;
         color: var(--txt);
         line-height: 1.15;
         margin-bottom: 8px;
       }
       .wb-sub {
-        font-size: 0.8rem;
+        font-size: 0.83rem;
+        font-weight: 500;
         color: var(--txt-2);
         line-height: 1.55;
         max-width: 320px;
       }
       .wb-chips {
         display: flex;
-        gap: 12px;
-        margin-top: 20px;
+        gap: 10px;
+        margin-top: 18px;
         flex-wrap: wrap;
       }
       .wb-chip {
@@ -925,7 +927,7 @@
         background: var(--bg-4);
         border: 1px solid var(--border-2);
         border-radius: 12px;
-        padding: 10px 16px;
+        padding: 10px 14px;
         transition: background var(--t-slow);
       }
       .chip-icon {
@@ -939,13 +941,14 @@
         flex-shrink: 0;
       }
       .ci-cyan {
-        background: rgba(6, 182, 212, 0.12);
+        background: rgba(6, 182, 212, 0.14);
       }
       .ci-gold {
-        background: rgba(245, 158, 11, 0.12);
+        background: rgba(245, 158, 11, 0.14);
       }
       .chip-label {
-        font-size: 0.62rem;
+        font-size: 0.64rem;
+        font-weight: 600;
         color: var(--txt-2);
         margin-bottom: 2px;
       }
@@ -959,8 +962,8 @@
       .wb-star {
         position: relative;
         z-index: 2;
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
         flex-shrink: 0;
         animation: floatStar 4.5s ease-in-out infinite;
       }
@@ -975,23 +978,23 @@
       }
 
       /* ═══════════════════════════════════════════════
-   DAILY GOAL
-═══════════════════════════════════════════════ */
+         DAILY GOAL
+      ═══════════════════════════════════════════════ */
       .daily-goal-card {
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius);
-        padding: 20px 22px;
+        padding: 18px 20px;
         transition: background var(--t-slow);
       }
       .dg-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 14px;
+        margin-bottom: 13px;
       }
       .dg-title {
-        font-size: 0.84rem;
+        font-size: 0.86rem;
         font-weight: 700;
         color: var(--txt);
       }
@@ -1000,8 +1003,8 @@
         font-size: 0.75rem;
         font-weight: 700;
         color: var(--brand-lt);
-        background: rgba(139, 92, 246, 0.1);
-        border: 1px solid rgba(139, 92, 246, 0.2);
+        background: rgba(139, 92, 246, 0.12);
+        border: 1px solid rgba(139, 92, 246, 0.25);
         padding: 3px 10px;
         border-radius: 20px;
       }
@@ -1046,21 +1049,22 @@
         margin-top: 10px;
       }
       .dg-labels span {
-        font-size: 0.61rem;
+        font-size: 0.63rem;
+        font-weight: 500;
         color: var(--txt-3);
       }
       .dg-labels span.active {
         color: var(--brand-lt);
-        font-weight: 600;
+        font-weight: 700;
       }
 
       /* ═══════════════════════════════════════════════
-   ACTIVITIES GRID — with real images
-═══════════════════════════════════════════════ */
+         ACTIVITIES GRID
+      ═══════════════════════════════════════════════ */
       .act-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
+        gap: 12px;
       }
       .act-card {
         background: var(--surface);
@@ -1083,8 +1087,6 @@
         border-color: rgba(139, 92, 246, 0.35);
         box-shadow: 0 12px 36px rgba(109, 40, 217, 0.18);
       }
-
-      /* Real image background */
       .act-img {
         position: absolute;
         inset: 0;
@@ -1094,14 +1096,12 @@
         transition:
           transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
           filter 0.3s ease;
-        filter: brightness(0.72) saturate(1.1);
+        filter: brightness(0.7) saturate(1.1);
       }
       .act-card:hover .act-img {
         transform: scale(1.06);
-        filter: brightness(0.62) saturate(1.2);
+        filter: brightness(0.6) saturate(1.2);
       }
-
-      /* Gradient overlay on top of image */
       .act-overlay {
         position: absolute;
         inset: 0;
@@ -1109,31 +1109,31 @@
           to bottom,
           rgba(0, 0, 0, 0) 0%,
           rgba(0, 0, 0, 0.1) 30%,
-          rgba(0, 0, 0, 0.75) 70%,
-          rgba(0, 0, 0, 0.95) 100%
+          rgba(0, 0, 0, 0.78) 70%,
+          rgba(0, 0, 0, 0.96) 100%
         );
         pointer-events: none;
       }
-
       .act-foot {
         position: relative;
         z-index: 2;
         padding: 10px 13px 13px;
       }
       .act-name {
-        font-size: 0.72rem;
+        font-size: 0.73rem;
         font-weight: 800;
         letter-spacing: 0.04em;
         color: #fff;
         margin-bottom: 2px;
       }
       .act-sub {
-        font-size: 0.6rem;
-        color: rgba(255, 255, 255, 0.55);
-        margin-bottom: 5px;
+        font-size: 0.61rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 4px;
+        font-weight: 500;
       }
       .act-earn {
-        font-size: 0.61rem;
+        font-size: 0.62rem;
         color: var(--gold);
         font-weight: 700;
         margin-bottom: 6px;
@@ -1142,7 +1142,7 @@
         display: inline-block;
         padding: 5px 13px;
         border-radius: 20px;
-        font-size: 0.64rem;
+        font-size: 0.65rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.04em;
@@ -1225,12 +1225,12 @@
       }
 
       /* ═══════════════════════════════════════════════
-   RECENT TRANSACTIONS
-═══════════════════════════════════════════════ */
+         RECENT TRANSACTIONS
+      ═══════════════════════════════════════════════ */
       .txn-list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 9px;
       }
       .txn-item {
         display: flex;
@@ -1239,7 +1239,7 @@
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius-sm);
-        padding: 12px 15px;
+        padding: 12px 14px;
         transition:
           border-color var(--t),
           background var(--t-slow);
@@ -1262,7 +1262,7 @@
         min-width: 0;
       }
       .txn-title {
-        font-size: 0.82rem;
+        font-size: 0.84rem;
         font-weight: 700;
         color: var(--txt);
         white-space: nowrap;
@@ -1271,8 +1271,9 @@
         margin-bottom: 2px;
       }
       .txn-meta {
-        font-size: 0.63rem;
+        font-size: 0.65rem;
         color: var(--txt-2);
+        font-weight: 500;
       }
       .txn-right {
         text-align: right;
@@ -1280,7 +1281,7 @@
       }
       .txn-amt {
         font-family: "JetBrains Mono", monospace;
-        font-size: 0.86rem;
+        font-size: 0.88rem;
         font-weight: 700;
       }
       .txn-amt.pos {
@@ -1290,14 +1291,15 @@
         color: var(--red);
       }
       .txn-time {
-        font-size: 0.6rem;
+        font-size: 0.61rem;
         color: var(--txt-3);
         margin-top: 2px;
+        font-weight: 500;
       }
 
       /* ═══════════════════════════════════════════════
-   RIGHT COLUMN — PANELS
-═══════════════════════════════════════════════ */
+         RIGHT COLUMN PANELS
+      ═══════════════════════════════════════════════ */
       .panel {
         background: var(--surface);
         border: 1px solid var(--border-2);
@@ -1357,7 +1359,7 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        font-size: 0.62rem;
+        font-size: 0.63rem;
         font-weight: 700;
         color: var(--orange);
         text-transform: uppercase;
@@ -1373,8 +1375,8 @@
         margin-bottom: 5px;
       }
       .ft-desc {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.71rem;
+        color: rgba(255, 255, 255, 0.65);
         line-height: 1.45;
         margin-bottom: 12px;
       }
@@ -1392,9 +1394,10 @@
         justify-content: space-between;
       }
       .ft-earn-label {
-        font-size: 0.6rem;
+        font-size: 0.61rem;
         color: rgba(255, 255, 255, 0.5);
         margin-bottom: 2px;
+        font-weight: 500;
       }
       .ft-earn-val {
         font-family: "JetBrains Mono", monospace;
@@ -1408,7 +1411,7 @@
         border: none;
         padding: 7px 16px;
         border-radius: 20px;
-        font-size: 0.73rem;
+        font-size: 0.74rem;
         font-weight: 700;
         transition: all var(--t);
         box-shadow: 0 3px 12px rgba(236, 72, 153, 0.28);
@@ -1423,7 +1426,7 @@
         padding: 4px 12px 12px;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 6px;
       }
       .task-item {
         display: flex;
@@ -1481,7 +1484,7 @@
         min-width: 0;
       }
       .ti-title {
-        font-size: 0.78rem;
+        font-size: 0.8rem;
         font-weight: 700;
         color: var(--txt);
         margin-bottom: 1px;
@@ -1490,15 +1493,16 @@
         text-overflow: ellipsis;
       }
       .ti-desc {
-        font-size: 0.62rem;
+        font-size: 0.63rem;
         color: var(--txt-2);
+        font-weight: 500;
       }
       .ti-new-badge {
         font-size: 0.53rem;
         font-weight: 700;
         background: rgba(6, 182, 212, 0.13);
         color: var(--cyan);
-        border: 1px solid rgba(6, 182, 212, 0.2);
+        border: 1px solid rgba(6, 182, 212, 0.22);
         padding: 1px 5px;
         border-radius: 4px;
         margin-top: 3px;
@@ -1510,7 +1514,7 @@
       }
       .ti-amt {
         font-family: "JetBrains Mono", monospace;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
         font-weight: 700;
         color: var(--green);
         white-space: nowrap;
@@ -1529,7 +1533,7 @@
       /* Referral */
       .ref-card {
         background: var(--surface);
-        border: 1px solid rgba(6, 182, 212, 0.2);
+        border: 1px solid rgba(6, 182, 212, 0.22);
         border-radius: var(--radius);
         padding: 18px;
         position: relative;
@@ -1561,13 +1565,14 @@
       }
       .ref-title {
         font-family: "Syne", sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         font-weight: 800;
         color: var(--txt);
         margin-bottom: 5px;
       }
       .ref-desc {
-        font-size: 0.7rem;
+        font-size: 0.72rem;
+        font-weight: 500;
         color: var(--txt-2);
         line-height: 1.45;
         margin-bottom: 12px;
@@ -1584,13 +1589,13 @@
       }
       .ref-code {
         font-family: "JetBrains Mono", monospace;
-        font-size: 0.76rem;
+        font-size: 0.78rem;
         font-weight: 700;
         color: var(--cyan);
         letter-spacing: 0.06em;
       }
       .copy-btn {
-        font-size: 0.65rem;
+        font-size: 0.67rem;
         font-weight: 700;
         background: rgba(6, 182, 212, 0.12);
         color: var(--cyan);
@@ -1604,9 +1609,9 @@
         background: rgba(6, 182, 212, 0.22);
       }
       .ref-earned {
-        font-size: 0.67rem;
+        font-size: 0.69rem;
         color: var(--green);
-        font-weight: 600;
+        font-weight: 700;
       }
 
       /* Leaderboard */
@@ -1614,7 +1619,7 @@
         padding: 8px 12px 12px;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 4px;
       }
       .lb-item {
         display: flex;
@@ -1665,8 +1670,8 @@
       }
       .lb-name {
         flex: 1;
-        font-size: 0.77rem;
-        font-weight: 600;
+        font-size: 0.79rem;
+        font-weight: 700;
         color: var(--txt);
       }
       .you-tag {
@@ -1680,7 +1685,7 @@
       }
       .lb-amount {
         font-family: "JetBrains Mono", monospace;
-        font-size: 0.75rem;
+        font-size: 0.77rem;
         font-weight: 700;
         color: var(--green);
       }
@@ -1688,33 +1693,31 @@
         background: rgba(139, 92, 246, 0.06);
         border-radius: var(--radius-xs);
       }
-
-      /* Country flag row in leaderboard */
       .lb-country {
         font-size: 0.72rem;
         flex-shrink: 0;
       }
 
-      /* ═══════ PAYOUT METHODS STRIP (global) ═══════ */
+      /* Payout */
       .payout-strip {
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius);
-        padding: 14px 18px;
+        padding: 14px 16px;
         transition: background var(--t-slow);
       }
       .payout-label {
-        font-size: 0.67rem;
-        font-weight: 600;
-        color: var(--txt-3);
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: var(--txt-2);
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 12px;
+        letter-spacing: 0.08em;
+        margin-bottom: 11px;
       }
       .payout-icons {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 7px;
         flex-wrap: wrap;
       }
       .payout-badge {
@@ -1725,7 +1728,7 @@
         border: 1px solid var(--border-2);
         border-radius: 8px;
         padding: 5px 10px;
-        font-size: 0.68rem;
+        font-size: 0.7rem;
         font-weight: 700;
         color: var(--txt);
         transition: border-color var(--t);
@@ -1733,25 +1736,22 @@
       .payout-badge:hover {
         border-color: var(--brand-lt);
       }
-      .payout-badge svg,
-      .payout-badge .p-dot {
-        flex-shrink: 0;
-      }
       .p-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
+        flex-shrink: 0;
       }
 
-      /* ═══════ COUNTRIES BANNER ═══════ */
+      /* Countries banner */
       .countries-banner {
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius);
-        padding: 16px 18px;
+        padding: 14px 16px;
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 14px;
         transition: background var(--t-slow);
       }
       .cb-stat {
@@ -1760,12 +1760,13 @@
       }
       .cb-val {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 800;
         color: var(--txt);
       }
       .cb-label {
-        font-size: 0.62rem;
+        font-size: 0.63rem;
+        font-weight: 600;
         color: var(--txt-2);
         margin-top: 2px;
       }
@@ -1775,17 +1776,10 @@
         background: var(--border-2);
         flex-shrink: 0;
       }
-      .flag-row {
-        display: flex;
-        gap: 4px;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: 1rem;
-      }
 
       /* ═══════════════════════════════════════════════
-   REVEAL ANIMATIONS
-═══════════════════════════════════════════════ */
+         REVEAL ANIMATIONS
+      ═══════════════════════════════════════════════ */
       .reveal {
         opacity: 0;
         transform: translateY(18px);
@@ -1831,8 +1825,140 @@
       }
 
       /* ═══════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════ */
+         MOBILE BOTTOM NAV (new — phones only)
+      ═══════════════════════════════════════════════ */
+      .mobile-bottom-nav {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 250;
+        background: var(--bg-2);
+        border-top: 1px solid var(--border);
+        padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .mbn-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .mbn-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        padding: 4px 12px;
+        border-radius: 12px;
+        color: var(--txt-3);
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        transition:
+          color var(--t),
+          background var(--t);
+        flex: 1;
+        max-width: 72px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-decoration: none;
+      }
+      .mbn-item svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+      .mbn-item.active {
+        color: var(--brand-lt);
+      }
+      .mbn-item:hover {
+        color: var(--txt-2);
+      }
+      .mbn-badge {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        width: 14px;
+        height: 14px;
+        background: var(--accent);
+        border-radius: 50%;
+        border: 2px solid var(--bg-2);
+        font-size: 0.5rem;
+        font-weight: 800;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mbn-icon-wrap {
+        position: relative;
+      }
+
+      /* ═══════════════════════════════════════════════
+         MOBILE EARN SUMMARY BAR (new — phones only)
+      ═══════════════════════════════════════════════ */
+      .mobile-earn-bar {
+        display: none;
+        background: linear-gradient(
+          135deg,
+          rgba(109, 40, 217, 0.12) 0%,
+          rgba(236, 72, 153, 0.08) 100%
+        );
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-bottom: 2px;
+      }
+      .meb-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .meb-stat {
+        text-align: center;
+        flex: 1;
+      }
+      .meb-val {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--txt);
+        line-height: 1.1;
+      }
+      .meb-label {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: var(--txt-2);
+        margin-top: 2px;
+      }
+      .meb-div {
+        width: 1px;
+        height: 32px;
+        background: var(--border-2);
+        flex-shrink: 0;
+      }
+      .meb-cta {
+        background: linear-gradient(90deg, #6d28d9, #8b5cf6);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 9px 16px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        font-family: "DM Sans", sans-serif;
+        white-space: nowrap;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      /* ═══════════════════════════════════════════════
+         RESPONSIVE
+      ═══════════════════════════════════════════════ */
       @media (min-width: 1400px) {
         :root {
           --sidebar-w: 268px;
@@ -1872,10 +1998,10 @@
           height: auto;
           border-left: none;
           border-top: 1px solid var(--border-2);
-          padding: 24px 28px 48px;
+          padding: 24px 24px 48px;
         }
         .center-col {
-          padding-right: 28px;
+          padding-right: 24px;
         }
         .wb-star {
           display: none;
@@ -1884,7 +2010,13 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
+      /* ═══ TABLET (768px) ═══ */
       @media (max-width: 768px) {
+        :root {
+          --topbar-h: 56px;
+        }
+
         .sidebar {
           position: fixed;
           transform: translateX(-100%);
@@ -1901,8 +2033,10 @@
         .overlay.open {
           pointer-events: all;
         }
+
         .topbar {
-          padding: 0 16px;
+          padding: 0 14px;
+          gap: 8px;
         }
         .hamburger {
           display: flex;
@@ -1910,38 +2044,552 @@
         .earn-ticker {
           display: none;
         }
-        .stats-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .center-col {
-          padding: 18px 16px 48px;
-        }
-        .right-col {
-          padding: 0 16px 48px;
-        }
-        .act-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 520px) {
-        .act-grid {
-          grid-template-columns: 1fr;
-        }
-        .wb-chips {
-          flex-direction: column;
-        }
-        .u-name-block .u-earn {
+        .user-pill {
           display: none;
         }
+
         .stats-grid {
           grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .center-col {
+          padding: 16px 14px 100px;
+        }
+        .right-col {
+          padding: 0 14px 100px;
+        }
+        .act-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .welcome-banner {
+          padding: 20px 18px;
+        }
+        .wb-title {
+          font-size: 1.45rem;
+        }
+        .wb-sub {
+          font-size: 0.8rem;
+        }
+        .wb-chips {
+          gap: 8px;
+        }
+        .wb-chip {
+          padding: 9px 13px;
+        }
+
+        .txn-title {
+          font-size: 0.82rem;
+        }
+        .txn-meta {
+          font-size: 0.63rem;
+        }
+        .txn-amt {
+          font-size: 0.85rem;
+        }
+
+        .mobile-bottom-nav {
+          display: block;
+        }
+      }
+
+      /* ═══ MOBILE (520px) ═══ */
+      @media (max-width: 520px) {
+        :root {
+          --topbar-h: 52px;
+        }
+
+        .topbar {
+          padding: 0 12px;
+          gap: 6px;
+        }
+        .search-wrap {
+          max-width: none;
+        }
+        .search-wrap input {
+          font-size: 0.8rem;
+          height: 36px;
+        }
+        .icon-btn {
+          width: 36px;
+          height: 36px;
+        }
+        .theme-toggle {
+          width: 36px;
+          height: 36px;
+        }
+
+        /* Hide wallet icon on very small screens — less clutter */
+        .topbar-right .icon-btn:last-of-type {
+          display: none;
+        }
+
+        /* Stats: 2 columns, compact */
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 9px;
+        }
+        .stat-card {
+          padding: 13px 12px;
+          gap: 9px;
+        }
+        .sc-icon {
+          width: 36px;
+          height: 36px;
+          font-size: 0.9rem;
+          border-radius: 9px;
         }
         .sc-val {
           font-size: 0.88rem;
         }
-        .countries-banner {
-          flex-wrap: wrap;
+        .sc-label {
+          font-size: 0.65rem;
         }
+        .sc-delta {
+          font-size: 0.62rem;
+        }
+
+        /* Welcome banner */
+        .welcome-banner {
+          padding: 18px 16px;
+          gap: 0;
+        }
+        .wb-title {
+          font-size: 1.3rem;
+        }
+        .wb-sub {
+          font-size: 0.78rem;
+          max-width: 100%;
+        }
+        .wb-greeting {
+          font-size: 0.72rem;
+        }
+        .wb-chips {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .wb-chip {
+          padding: 8px 12px;
+          flex: 1;
+          min-width: 120px;
+        }
+        .chip-val {
+          font-size: 0.82rem;
+        }
+        .chip-label {
+          font-size: 0.6rem;
+        }
+
+        /* Mobile earn bar visible */
+        .mobile-earn-bar {
+          display: block;
+        }
+
+        /* Daily goal */
+        .daily-goal-card {
+          padding: 15px 16px;
+        }
+        .dg-title {
+          font-size: 0.82rem;
+        }
+        .dg-labels span {
+          font-size: 0.58rem;
+        }
+        /* Hide middle labels on tiny screens */
+        .dg-labels span:nth-child(2),
+        .dg-labels span:nth-child(4) {
+          display: none;
+        }
+
+        /* Activities: single column on smallest screens */
+        .act-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .act-card {
+          aspect-ratio: 16/9;
+        }
+        .act-name {
+          font-size: 0.8rem;
+        }
+        .act-sub {
+          font-size: 0.65rem;
+        }
+        .act-earn {
+          font-size: 0.67rem;
+        }
+        .act-cta {
+          font-size: 0.67rem;
+          padding: 5px 14px;
+        }
+
+        /* Transactions */
+        .txn-item {
+          padding: 11px 12px;
+          gap: 10px;
+        }
+        .txn-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 9px;
+          font-size: 0.8rem;
+        }
+        .txn-title {
+          font-size: 0.8rem;
+        }
+        .txn-meta {
+          font-size: 0.62rem;
+        }
+        .txn-amt {
+          font-size: 0.82rem;
+        }
+
+        /* Right col adjustments */
+        .right-col {
+          padding: 0 12px 100px;
+          gap: 14px;
+        }
+
+        /* Countries banner compact */
+        .countries-banner {
+          padding: 12px 14px;
+          gap: 10px;
+        }
+        .cb-val {
+          font-size: 0.95rem;
+        }
+        .cb-label {
+          font-size: 0.6rem;
+        }
+
+        /* Featured task */
+        .featured-task {
+          padding: 14px 13px;
+        }
+        .ft-title {
+          font-size: 0.95rem;
+        }
+        .ft-desc {
+          font-size: 0.68rem;
+        }
+        .ft-earn-val {
+          font-size: 0.9rem;
+        }
+        .ft-emoji {
+          font-size: 1.8rem;
+        }
+        .ft-btn {
+          font-size: 0.7rem;
+          padding: 6px 14px;
+        }
+
+        /* Task items */
+        .task-list-inner {
+          padding: 4px 10px 10px;
+          gap: 6px;
+        }
+        .task-item {
+          padding: 9px 10px;
+        }
+        .ti-title {
+          font-size: 0.78rem;
+        }
+        .ti-desc {
+          font-size: 0.61rem;
+        }
+        .ti-amt {
+          font-size: 0.78rem;
+        }
+        .ti-icon {
+          width: 33px;
+          height: 33px;
+          border-radius: 8px;
+          font-size: 0.8rem;
+        }
+
+        /* Referral */
+        .ref-card {
+          padding: 16px 14px;
+        }
+        .ref-title {
+          font-size: 0.88rem;
+        }
+        .ref-desc {
+          font-size: 0.7rem;
+        }
+        .ref-code {
+          font-size: 0.73rem;
+        }
+
+        /* Leaderboard */
+        .lb-name {
+          font-size: 0.76rem;
+        }
+        .lb-amount {
+          font-size: 0.73rem;
+        }
+
+        /* Payout */
+        .payout-strip {
+          padding: 12px 14px;
+        }
+        .payout-badge {
+          font-size: 0.67rem;
+          padding: 4px 9px;
+        }
+
+        /* Section headings */
+        .sec-head {
+          margin-bottom: 12px;
+        }
+        .see-all {
+          font-size: 0.7rem;
+          padding: 4px 11px;
+        }
+        .sec-head h2 {
+          font-size: 0.72rem;
+        }
+
+        /* Panel headers */
+        .panel-header {
+          padding: 12px 14px 10px;
+        }
+        .panel-header h3 {
+          font-size: 0.72rem;
+        }
+      }
+
+      /* ═══ VERY SMALL (360px) ═══ */
+      @media (max-width: 380px) {
+        .topbar {
+          padding: 0 10px;
+        }
+        .center-col {
+          padding: 14px 10px 100px;
+        }
+        .right-col {
+          padding: 0 10px 100px;
+        }
+        .wb-title {
+          font-size: 1.15rem;
+        }
+        .sc-val {
+          font-size: 0.82rem;
+        }
+        .stat-card {
+          padding: 11px 10px;
+          gap: 8px;
+        }
+        .sc-icon {
+          width: 32px;
+          height: 32px;
+          font-size: 0.8rem;
+        }
+        .act-card {
+          aspect-ratio: 4/3;
+        }
+        .wb-chips {
+          flex-direction: column;
+        }
+        .wb-chip {
+          min-width: unset;
+        }
+        .payout-icons {
+          gap: 5px;
+        }
+        .payout-badge {
+          font-size: 0.63rem;
+          padding: 3px 7px;
+        }
+        .mbn-item {
+          font-size: 0.55rem;
+          padding: 4px 8px;
+        }
+      }
+
+      /* ═══════════════════════════════════════════════
+         LIGHT MODE — BOOSTED CONTRAST & CLARITY
+      ═══════════════════════════════════════════════ */
+      [data-theme="light"] .stat-card {
+        box-shadow: 0 2px 12px rgba(109, 40, 217, 0.07);
+      }
+      [data-theme="light"] .stat-card:hover {
+        box-shadow: 0 6px 24px rgba(109, 40, 217, 0.13);
+      }
+      [data-theme="light"] .txn-item {
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      }
+      [data-theme="light"] .panel {
+        box-shadow: 0 2px 12px rgba(109, 40, 217, 0.07);
+      }
+      [data-theme="light"] .ref-card {
+        box-shadow: 0 2px 12px rgba(6, 182, 212, 0.07);
+      }
+      [data-theme="light"] .welcome-banner {
+        box-shadow: 0 4px 20px rgba(109, 40, 217, 0.08);
+      }
+      [data-theme="light"] .act-card {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+      }
+      [data-theme="light"] .daily-goal-card {
+        box-shadow: 0 2px 10px rgba(109, 40, 217, 0.06);
+      }
+
+      /* Stronger text in light mode for max readability */
+      [data-theme="light"] .sc-label {
+        color: #3d3565;
+      }
+      [data-theme="light"] .sc-val {
+        color: #111028;
+      }
+      [data-theme="light"] .sc-delta {
+        color: #059669;
+      }
+      [data-theme="light"] .txn-title {
+        color: #111028;
+      }
+      [data-theme="light"] .txn-meta {
+        color: #4a4278;
+      }
+      [data-theme="light"] .txn-time {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .dg-title {
+        color: #111028;
+      }
+      [data-theme="light"] .ti-title {
+        color: #111028;
+      }
+      [data-theme="light"] .ti-desc {
+        color: #4a4278;
+      }
+      [data-theme="light"] .lb-name {
+        color: #111028;
+      }
+      [data-theme="light"] .ref-title {
+        color: #111028;
+      }
+      [data-theme="light"] .ref-desc {
+        color: #4a4278;
+      }
+      [data-theme="light"] .wb-title {
+        color: #111028;
+      }
+      [data-theme="light"] .wb-sub {
+        color: #3d3565;
+      }
+      [data-theme="light"] .wb-greeting {
+        color: #4a4278;
+      }
+      [data-theme="light"] .chip-label {
+        color: #4a4278;
+      }
+      [data-theme="light"] .chip-val {
+        color: #111028;
+      }
+      [data-theme="light"] .payout-badge {
+        color: #111028;
+      }
+      [data-theme="light"] .cb-val {
+        color: #111028;
+      }
+      [data-theme="light"] .cb-label {
+        color: #4a4278;
+      }
+      [data-theme="light"] .meb-val {
+        color: #111028;
+      }
+      [data-theme="light"] .meb-label {
+        color: #4a4278;
+      }
+      [data-theme="light"] nav ul li a {
+        color: #4a4278;
+      }
+      [data-theme="light"] nav ul li.active a,
+      [data-theme="light"] nav ul li a:hover {
+        color: #111028;
+      }
+      [data-theme="light"] .nav-label {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .s-name {
+        color: #111028;
+      }
+      [data-theme="light"] .logo-text p {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .sidebar-footer {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .dg-labels span {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .dg-labels span.active {
+        color: var(--brand);
+      }
+      [data-theme="light"] .dg-pct {
+        color: var(--brand);
+        background: rgba(109, 40, 217, 0.08);
+        border-color: rgba(109, 40, 217, 0.2);
+      }
+      [data-theme="light"] .mbn-item {
+        color: #7d74a8;
+      }
+      [data-theme="light"] .mbn-item.active {
+        color: var(--brand);
+      }
+      [data-theme="light"] .mbn-badge {
+        border-color: var(--bg-2);
+      }
+      [data-theme="light"] .ref-code {
+        color: #0891b2;
+      }
+      [data-theme="light"] .search-wrap input {
+        color: #111028;
+        background: #fff;
+      }
+      [data-theme="light"] .search-wrap input::placeholder {
+        color: #9a93c0;
+      }
+      [data-theme="light"] .u-name {
+        color: #111028;
+      }
+      [data-theme="light"] .earn-ticker {
+        background: rgba(5, 150, 105, 0.09);
+        border-color: rgba(5, 150, 105, 0.22);
+      }
+      [data-theme="light"] .mobile-earn-bar {
+        background: linear-gradient(
+          135deg,
+          rgba(109, 40, 217, 0.07) 0%,
+          rgba(236, 72, 153, 0.05) 100%
+        );
+        border-color: rgba(109, 40, 217, 0.15);
+      }
+      [data-theme="light"] .lb-rank.rn {
+        color: #9a93c0;
+      }
+      [data-theme="light"] .globe-badge {
+        color: #4a4278;
+      }
+      [data-theme="light"] .you-tag {
+        color: var(--brand);
+      }
+      [data-theme="light"] .ti-amt {
+        color: #059669;
+      }
+      [data-theme="light"] .lb-amount {
+        color: #059669;
+      }
+      [data-theme="light"] .ref-earned {
+        color: #059669;
+      }
+      [data-theme="light"] .txn-amt.pos {
+        color: #059669;
+      }
+      [data-theme="light"] .txn-amt.neg {
+        color: #dc2626;
       }
     </style>
   </head>
@@ -2182,9 +2830,9 @@
           class="sidebar-user"
           aria-label="User profile"
         >
-          <div class="s-avatar" aria-hidden="true">OW</div>
+          <div class="s-avatar" aria-hidden="true">👤</div>
           <div class="s-info">
-            <div class="s-name">Olivia Wilson</div>
+            <div class="s-name">DemoAcc</div>
             <div class="s-status">Online · Level 7</div>
           </div>
         </a>
@@ -2304,11 +2952,11 @@
             <a
               href="registration.html"
               class="user-pill"
-              aria-label="User menu for Olivia Wilson"
+              aria-label="User menu for DemoAcc"
             >
-              <div class="u-ava" aria-hidden="true">OW</div>
+              <div class="u-ava" aria-hidden="true">👤</div>
               <div class="u-name-block">
-                <div class="u-name">Olivia Wilson</div>
+                <div class="u-name">DemoAcc</div>
                 <div class="u-earn">● KSh 2,300 today</div>
               </div>
               <svg
@@ -2329,74 +2977,37 @@
         <div class="content-body">
           <!-- CENTER COLUMN -->
           <main class="center-col" id="main-content">
-            <!-- ─── DASHBOARD SECTION (Kenya-specific) ─── -->
+            <!-- ─── DASHBOARD ─── -->
             <section id="dashboard" aria-labelledby="dashboard-heading">
               <h2 id="dashboard-heading" class="visually-hidden">
                 Dashboard Overview
               </h2>
 
-              <!-- Stats Grid -->
-              <div class="stats-grid" role="list" aria-label="Key statistics">
-                <div class="stat-card reveal" role="listitem">
-                  <div class="sc-icon sci-1" aria-hidden="true">💰</div>
-                  <div class="sc-body">
-                    <div class="sc-label">Total Earnings</div>
+              <!-- Mobile Earn Summary Bar (phones only) -->
+              <div class="mobile-earn-bar reveal">
+                <div class="meb-row">
+                  <div class="meb-stat">
                     <div
-                      class="sc-val count-up"
+                      class="meb-val count-up3"
                       data-target="1245000"
                       data-prefix="KSh "
                     >
                       KSh 0
                     </div>
-                    <div class="sc-delta">↑ 12.4% this month</div>
+                    <div class="meb-label">Total Earned</div>
                   </div>
-                </div>
-                <div class="stat-card reveal" role="listitem">
-                  <div class="sc-icon sci-2" aria-hidden="true">⭐</div>
-                  <div class="sc-body">
-                    <div class="sc-label">Total Points</div>
-                    <div
-                      class="sc-val count-up"
-                      data-target="246800"
-                      data-prefix=""
-                    >
-                      0
-                    </div>
-                    <div class="sc-delta">↑ 3,200 this week</div>
+                  <div class="meb-div"></div>
+                  <div class="meb-stat">
+                    <div class="meb-val">KSh 2,300</div>
+                    <div class="meb-label">Today</div>
                   </div>
-                </div>
-                <div class="stat-card reveal" role="listitem">
-                  <div class="sc-icon sci-3" aria-hidden="true">✅</div>
-                  <div class="sc-body">
-                    <div class="sc-label">Tasks Completed</div>
-                    <div
-                      class="sc-val count-up"
-                      data-target="1847"
-                      data-prefix=""
-                    >
-                      0
-                    </div>
-                    <div class="sc-delta">↑ 24 today</div>
-                  </div>
-                </div>
-                <div class="stat-card reveal" role="listitem">
-                  <div class="sc-icon sci-4" aria-hidden="true">👥</div>
-                  <div class="sc-body">
-                    <div class="sc-label">Active Referrals</div>
-                    <div
-                      class="sc-val count-up"
-                      data-target="38"
-                      data-prefix=""
-                    >
-                      0
-                    </div>
-                    <div class="sc-delta">↑ 5 this week</div>
-                  </div>
+                  <div class="meb-div"></div>
+                  <a href="registration.html" class="meb-cta">Withdraw</a>
                 </div>
               </div>
 
-              <!-- Welcome Banner (Kenya-specific for this user) -->
-              <div class="welcome-banner reveal" style="margin-top: 16px">
+              <!-- Welcome Banner -->
+              <div class="welcome-banner reveal" style="margin-top: 4px">
                 <div class="wb-orb-1" aria-hidden="true"></div>
                 <div class="wb-orb-2" aria-hidden="true"></div>
                 <div class="wb-grid-overlay" aria-hidden="true"></div>
@@ -2414,7 +3025,7 @@
                     </div>
                     Kenya
                   </div>
-                  <h3 class="wb-title">Olivia Wilson! 👋</h3>
+                  <h3 class="wb-title">DemoAcc! 👋</h3>
                   <p class="wb-sub">
                     Complete tasks, earn points, and withdraw instantly to
                     M-Pesa or your bank.
@@ -2479,13 +3090,71 @@
                 </div>
               </div>
 
-              <!-- Daily Goal (Kenya-specific for this user) -->
-              <div class="daily-goal-card reveal" style="margin-top: 16px">
+              <!-- Stats Grid -->
+              <div class="stats-grid" role="list" aria-label="Key statistics">
+                <div class="stat-card reveal" role="listitem">
+                  <div class="sc-icon sci-1" aria-hidden="true">💰</div>
+                  <div class="sc-body">
+                    <div class="sc-label">Total Earnings</div>
+                    <div
+                      class="sc-val count-up"
+                      data-target="1245000"
+                      data-prefix="KSh "
+                    >
+                      KSh 0
+                    </div>
+                    <div class="sc-delta">↑ 12.4% this month</div>
+                  </div>
+                </div>
+                <div class="stat-card reveal" role="listitem">
+                  <div class="sc-icon sci-2" aria-hidden="true">⭐</div>
+                  <div class="sc-body">
+                    <div class="sc-label">Total Points</div>
+                    <div
+                      class="sc-val count-up"
+                      data-target="246800"
+                      data-prefix=""
+                    >
+                      0
+                    </div>
+                    <div class="sc-delta">↑ 3,200 this week</div>
+                  </div>
+                </div>
+                <div class="stat-card reveal" role="listitem">
+                  <div class="sc-icon sci-3" aria-hidden="true">✅</div>
+                  <div class="sc-body">
+                    <div class="sc-label">Tasks Done</div>
+                    <div
+                      class="sc-val count-up"
+                      data-target="1847"
+                      data-prefix=""
+                    >
+                      0
+                    </div>
+                    <div class="sc-delta">↑ 24 today</div>
+                  </div>
+                </div>
+                <div class="stat-card reveal" role="listitem">
+                  <div class="sc-icon sci-4" aria-hidden="true">👥</div>
+                  <div class="sc-body">
+                    <div class="sc-label">Referrals</div>
+                    <div
+                      class="sc-val count-up"
+                      data-target="38"
+                      data-prefix=""
+                    >
+                      0
+                    </div>
+                    <div class="sc-delta">↑ 5 this week</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Daily Goal -->
+              <div class="daily-goal-card reveal" style="margin-top: 4px">
                 <div class="dg-header">
                   <div class="dg-title">📈 Daily Goal — KSh 5,000</div>
-                  <div class="dg-pct" aria-label="46% complete">
-                    46% Complete
-                  </div>
+                  <div class="dg-pct" aria-label="46% complete">46%</div>
                 </div>
                 <div
                   class="dg-bar-bg"
@@ -2507,7 +3176,7 @@
               </div>
             </section>
 
-            <!-- ─── ACTIVITIES SECTION (global, real images) ─── -->
+            <!-- ─── ACTIVITIES ─── -->
             <section id="activities" aria-labelledby="activities-heading">
               <div class="sec-head">
                 <h2 id="activities-heading">Activities</h2>
@@ -2519,7 +3188,6 @@
                 >
               </div>
               <div class="act-grid">
-                <!-- 1. Chat with Foreigners -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
@@ -2548,15 +3216,13 @@
                     >
                   </div>
                 </article>
-
-                <!-- 2. TikTok Videos -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
                   style="cursor: pointer"
                 >
                   <span class="act-badge bdg-free">FREE</span>
-                  <span class="earn-badge">$0.50/video</span>
+                  <span class="earn-badge">$0.60/video</span>
                   <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&fit=crop"
@@ -2578,8 +3244,6 @@
                     >
                   </div>
                 </article>
-
-                <!-- 3. YouTube Videos -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
@@ -2602,21 +3266,19 @@
                   <div class="act-foot">
                     <h3 class="act-name">YOUTUBE VIDEOS</h3>
                     <div class="act-sub">Watch and Earn</div>
-                    <div class="act-earn">Up to $80/day</div>
+                    <div class="act-earn">Up to $55/day</div>
                     <a href="registration.html" class="act-cta cta-pink"
                       >Watch Here</a
                     >
                   </div>
                 </article>
-
-                <!-- 4. AI Data Labeling -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
                   style="cursor: pointer"
                 >
                   <span class="act-badge bdg-new">NEW</span>
-                  <span class="earn-badge">$1–3/label</span>
+                  <span class="earn-badge">$1–8/label</span>
                   <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&fit=crop"
@@ -2638,8 +3300,6 @@
                     >
                   </div>
                 </article>
-
-                <!-- 5. Survey Tasks -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
@@ -2668,15 +3328,13 @@
                     >
                   </div>
                 </article>
-
-                <!-- 6. Instagram Reels -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
                   style="cursor: pointer"
                 >
                   <span class="act-badge bdg-new">NEW</span>
-                  <span class="earn-badge">$0.60/reel</span>
+                  <span class="earn-badge">$0.80/reel</span>
                   <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&q=80&fit=crop"
@@ -2692,14 +3350,12 @@
                   <div class="act-foot">
                     <h3 class="act-name">INSTAGRAM REELS</h3>
                     <div class="act-sub">Watch &amp; Like</div>
-                    <div class="act-earn">Up to $60/day</div>
+                    <div class="act-earn">Up to $45/day</div>
                     <a href="registration.html" class="act-cta cta-blue"
                       >Watch Now</a
                     >
                   </div>
                 </article>
-
-                <!-- 7. Video Editing -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
@@ -2722,14 +3378,12 @@
                   <div class="act-foot">
                     <h3 class="act-name">VIDEO EDITING</h3>
                     <div class="act-sub">Edit &amp; Earn</div>
-                    <div class="act-earn">Up to $120/day</div>
+                    <div class="act-earn">Up to $60/day</div>
                     <a href="registration.html" class="act-cta cta-pink"
                       >Start Editing</a
                     >
                   </div>
                 </article>
-
-                <!-- 8. Games Testing -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
@@ -2752,21 +3406,19 @@
                   <div class="act-foot">
                     <h3 class="act-name">GAMES TESTING</h3>
                     <div class="act-sub">Play &amp; Earn</div>
-                    <div class="act-earn">Up to $150/day</div>
+                    <div class="act-earn">Up to $40/day</div>
                     <a href="registration.html" class="act-cta cta-gold"
                       >Play Now</a
                     >
                   </div>
                 </article>
-
-                <!-- 9. WhatsApp Status -->
                 <article
                   class="act-card reveal"
                   onclick="location.href = 'registration.html'"
                   style="cursor: pointer"
                 >
                   <span class="act-badge bdg-new">NEW</span>
-                  <span class="earn-badge">$0.60/post</span>
+                  <span class="earn-badge">$1.60/post</span>
                   <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1614680376739-414d95ff43df?w=600&q=80&fit=crop"
@@ -2782,7 +3434,7 @@
                   <div class="act-foot">
                     <h3 class="act-name">WHATSAPP STATUS</h3>
                     <div class="act-sub">Post &amp; Earn</div>
-                    <div class="act-earn">Up to $60/day</div>
+                    <div class="act-earn">Up to $65/day</div>
                     <a href="registration.html" class="act-cta cta-blue"
                       >Post Now</a
                     >
@@ -2791,7 +3443,7 @@
               </div>
             </section>
 
-            <!-- ─── EARNINGS / TRANSACTIONS (Kenya-specific for this user) ─── -->
+            <!-- ─── TRANSACTIONS ─── -->
             <section id="earnings" aria-labelledby="earnings-heading">
               <div class="sec-head">
                 <h2 id="earnings-heading">Recent Transactions</h2>
@@ -2904,7 +3556,6 @@
 
           <!-- RIGHT COLUMN -->
           <aside class="right-col" aria-label="Tasks and leaderboard">
-            <!-- Global Reach Banner -->
             <div class="countries-banner reveal">
               <div class="cb-stat">
                 <div class="cb-val">180+</div>
@@ -2922,40 +3573,31 @@
               </div>
             </div>
 
-            <!-- Payout Methods -->
             <div class="payout-strip reveal">
               <div class="payout-label">💳 Payout Methods</div>
               <div class="payout-icons">
                 <div class="payout-badge">
-                  <p-dot
+                  <span
                     class="p-dot"
-                    style="
-                      background: #003087;
-                      width: 8px;
-                      height: 8px;
-                      border-radius: 50%;
-                      display: inline-block;
-                    "
-                  ></p-dot>
+                    style="background: #003087; display: inline-block"
+                  ></span>
                   PayPal
                 </div>
                 <div class="payout-badge">
-                  <span style="color: #00a651; font-size: 0.7rem">📱</span>
-                  M-Pesa
+                  <span style="font-size: 0.7rem">📱</span> M-Pesa
                 </div>
                 <div class="payout-badge">
                   <span style="font-size: 0.7rem">🏦</span> Bank
                 </div>
                 <div class="payout-badge">
-                  <span style="font-size: 0.7rem">💵</span> Wise
+                  <span style="font-size: 0.7rem">💵</span> Airtel
                 </div>
                 <div class="payout-badge">
-                  <span style="font-size: 0.7rem">₿</span> Crypto
+                  <span style="font-size: 0.7rem">₿</span> MTN
                 </div>
               </div>
             </div>
 
-            <!-- Available Tasks -->
             <section id="tasks" aria-labelledby="tasks-heading">
               <div class="panel">
                 <div class="panel-header">
@@ -2970,7 +3612,7 @@
                 <a
                   href="registration.html"
                   class="featured-task"
-                  aria-label="Hot Task: Chat with Lonely Foreigners - Earn up to $300"
+                  aria-label="Hot Task: Chat with Lonely Foreigners"
                 >
                   <div class="ft-orb" aria-hidden="true"></div>
                   <div class="ft-label">🔥 Hot Task</div>
@@ -2983,7 +3625,7 @@
                   <div class="ft-foot">
                     <div>
                       <div class="ft-earn-label">Earn up to</div>
-                      <div class="ft-earn-val">$300 / day</div>
+                      <div class="ft-earn-val">$200 / day</div>
                     </div>
                     <a href="registration.html" class="ft-btn">Start Now</a>
                   </div>
@@ -2996,7 +3638,7 @@
                       <div class="ti-desc">Listen to tracks and earn</div>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$120/day</div>
+                      <div class="ti-amt">$57/day</div>
                       <div class="ti-stars" aria-label="5 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>★</span>
@@ -3010,7 +3652,7 @@
                       <div class="ti-desc">Answer 10 questions, get paid</div>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$90/day</div>
+                      <div class="ti-amt">$63/day</div>
                       <div class="ti-stars" aria-label="5 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>★</span>
@@ -3024,7 +3666,7 @@
                       <div class="ti-desc">View statuses and get credited</div>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$65/day</div>
+                      <div class="ti-amt">$36/day</div>
                       <div class="ti-stars" aria-label="5 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>★</span>
@@ -3040,7 +3682,7 @@
                       </div>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$75/day</div>
+                      <div class="ti-amt">$45/day</div>
                       <div class="ti-stars" aria-label="5 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>★</span>
@@ -3069,7 +3711,7 @@
                       <div class="ti-desc">Write reviews, earn per review</div>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$110/day</div>
+                      <div class="ti-amt">$55/day</div>
                       <div class="ti-stars" aria-label="5 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>★</span>
@@ -3084,7 +3726,7 @@
                       <span class="ti-new-badge">NEW</span>
                     </div>
                     <div class="ti-meta">
-                      <div class="ti-amt">$40/day</div>
+                      <div class="ti-amt">$42/day</div>
                       <div class="ti-stars" aria-label="4 stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span
                         ><span>☆</span>
@@ -3111,7 +3753,6 @@
               </div>
             </section>
 
-            <!-- Referral -->
             <div class="ref-card reveal">
               <div class="ref-orb" aria-hidden="true"></div>
               <div class="ref-icon" aria-hidden="true">🤝</div>
@@ -3135,7 +3776,6 @@
               <div class="ref-earned">💰 $150 earned from referrals</div>
             </div>
 
-            <!-- Leaderboard (global) -->
             <div
               class="panel reveal"
               role="complementary"
@@ -3155,7 +3795,7 @@
                   <div class="lb-rank r1" aria-label="Rank 1">🥇</div>
                   <div class="lb-av" aria-hidden="true">AK</div>
                   <div class="lb-name">Alice K.</div>
-                  <div class="lb-country" aria-label="United States">🇺🇸</div>
+                  <div class="lb-country" aria-label="Uganda">🇺🇬</div>
                   <div class="lb-amount">$892</div>
                 </div>
                 <div class="lb-item" role="listitem">
@@ -3170,7 +3810,7 @@
                     BM
                   </div>
                   <div class="lb-name">Brian M.</div>
-                  <div class="lb-country" aria-label="United Kingdom">🇬🇧</div>
+                  <div class="lb-country" aria-label="Cameroon">🇨🇲</div>
                   <div class="lb-amount">$864</div>
                 </div>
                 <div class="lb-item" role="listitem">
@@ -3185,7 +3825,7 @@
                     CN
                   </div>
                   <div class="lb-name">Carol N.</div>
-                  <div class="lb-country" aria-label="Canada">🇨🇦</div>
+                  <div class="lb-country" aria-label="Zambia">🇿🇲</div>
                   <div class="lb-amount">$759</div>
                 </div>
                 <div class="lb-item" role="listitem">
@@ -3208,13 +3848,13 @@
                   role="listitem"
                   aria-label="Your position"
                 >
-                  <div class="lb-rank rn" aria-label="Rank 7">7</div>
-                  <div class="lb-av you" aria-hidden="true">OW</div>
+                  <div class="lb-rank rn" aria-label="Rank 5">5</div>
+                  <div class="lb-av you" aria-hidden="true">SW</div>
                   <div class="lb-name">
-                    Olivia W.<span class="you-tag">You</span>
+                    Sydney W.<span class="you-tag">You</span>
                   </div>
                   <div class="lb-country" aria-label="Kenya">🇰🇪</div>
-                  <div class="lb-amount">KSh 74,500</div>
+                  <div class="lb-amount">$600</div>
                 </div>
               </div>
             </div>
@@ -3222,6 +3862,69 @@
         </div>
       </div>
     </div>
+
+    <!-- ═══════ MOBILE BOTTOM NAV ═══════ -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+      <div class="mbn-inner">
+        <a
+          href="#dashboard"
+          class="mbn-item active"
+          aria-label="Dashboard"
+          aria-current="page"
+        >
+          <div class="mbn-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+              />
+            </svg>
+          </div>
+          Home
+        </a>
+        <a href="#activities" class="mbn-item" aria-label="Activities">
+          <div class="mbn-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+              />
+            </svg>
+          </div>
+          Earn
+        </a>
+        <a href="#tasks" class="mbn-item" aria-label="Tasks">
+          <div class="mbn-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+              />
+            </svg>
+            <span class="mbn-badge">12</span>
+          </div>
+          Tasks
+        </a>
+        <a href="registration.html" class="mbn-item" aria-label="Notifications">
+          <div class="mbn-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+              />
+            </svg>
+            <span class="mbn-badge">3</span>
+          </div>
+          Alerts
+        </a>
+        <a href="registration.html" class="mbn-item" aria-label="Profile">
+          <div class="mbn-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </div>
+          Profile
+        </a>
+      </div>
+    </nav>
 
     <script>
       /* ═══ THEME ═══ */
@@ -3271,6 +3974,7 @@
       /* ═══ SCROLL SPY ═══ */
       const sections = document.querySelectorAll("section[id]");
       const navItems = document.querySelectorAll("nav ul li[data-section]");
+      const mbnItems = document.querySelectorAll(".mbn-item");
       const scrollSpy = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -3283,12 +3987,19 @@
                   li.querySelector("a").setAttribute("aria-current", "page");
                 else li.querySelector("a").removeAttribute("aria-current");
               });
+              mbnItems.forEach((btn) => {
+                const href = btn.getAttribute("href");
+                btn.classList.toggle("active", href === "#" + id);
+                if (href === "#" + id) btn.setAttribute("aria-current", "page");
+                else btn.removeAttribute("aria-current");
+              });
             }
           });
         },
         { threshold: 0.2, rootMargin: "-20% 0px -60% 0px" },
       );
       sections.forEach((s) => scrollSpy.observe(s));
+
       navItems.forEach((li) => {
         li.querySelector("a").addEventListener("click", (e) => {
           const id = li.dataset.section;
@@ -3306,6 +4017,18 @@
         });
       });
 
+      mbnItems.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const href = btn.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.getElementById(href.slice(1));
+            if (target)
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
       /* ═══ REVEAL ═══ */
       const revealObs = new IntersectionObserver(
         (entries) => {
@@ -3316,7 +4039,7 @@
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.08 },
       );
       document
         .querySelectorAll(".reveal")
@@ -3349,7 +4072,7 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               document
-                .querySelectorAll(".count-up,.count-up2")
+                .querySelectorAll(".count-up,.count-up2,.count-up3")
                 .forEach((el) => countUp(el));
               setTimeout(() => {
                 const bar = document.getElementById("goalBar");
@@ -3403,6 +4126,9 @@
       setTimeout(() => {
         document
           .querySelectorAll(".stat-card.reveal")
+          .forEach((el) => el.classList.add("visible"));
+        document
+          .querySelectorAll(".welcome-banner.reveal,.mobile-earn-bar.reveal")
           .forEach((el) => el.classList.add("visible"));
       }, 80);
     </script>
