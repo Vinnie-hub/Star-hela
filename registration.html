@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STARHELA Coming Soon</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='bg' cx='50%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='50%25' stop-color='%236d28d9'/%3E%3Cstop offset='100%25' stop-color='%234c1d95'/%3E%3C/radialGradient%3E%3CradialGradient id='glow' cx='50%25' cy='30%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23ec4899' stop-opacity='0.6'/%3E%3Cstop offset='100%25' stop-color='%236d28d9' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230d0b1c'/%3E%3Crect width='64' height='64' rx='14' fill='url(%23glow)'/%3E%3Cpolygon points='32,6 38.5,22.5 56,22.5 42.5,33.5 48,50 32,40 16,50 21.5,33.5 8,22.5 25.5,22.5' fill='url(%23bg)' opacity='0.95'/%3E%3Cpolygon points='32,12 36.5,24.5 50,24.5 39.5,32 43.5,44 32,37 20.5,44 24.5,32 14,24.5 27.5,24.5' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%230d0b1c'/%3E%3Cpolygon points='90,18 108,64 158,64 120,92 136,140 90,114 44,140 60,92 22,64 72,64' fill='%236d28d9' opacity='0.95'/%3E%3C/svg%3E"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #00153a;
+        color: #fff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .hero {
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 15, 50, 0.55), rgba(0, 15, 50, 0.7)),
+          url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+      }
+
+      .container {
+        max-width: 1000px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 7vw, 5rem);
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 300;
+        margin-bottom: 18px;
+      }
+
+      p {
+        font-size: 1.15rem;
+        max-width: 760px;
+        margin: 0 auto 28px;
+        line-height: 1.6;
+        color: #f0f0f0;
+      }
+
+      /* ── Countdown ── */
+      .timer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 18px;
+        max-width: 700px;
+        margin: 25px auto;
+      }
+
+      .box {
+        background: #fff;
+        color: #111;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .num {
+        font-size: 2.2rem;
+        color: #ff3d7a;
+        font-weight: 700;
+      }
+      .label {
+        font-weight: 700;
+        color: #111;
+      }
+
+      /* ── Contact card ── */
+      .contact {
+        margin-top: 35px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 22px 20px;
+        border-radius: 18px;
+        backdrop-filter: blur(6px);
+      }
+
+      .contact h3 {
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+      }
+
+      /* ── Buttons row ── */
+      .buttons {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 18px;
+        align-items: center;
+      }
+
+      /* WhatsApp Chat — green pill */
+      .wa-wrap {
+        position: relative;
+        display: inline-block;
+      }
+
+      .badge {
+        position: absolute;
+        top: -9px;
+        right: -10px;
+        background: #ef4444;
+        color: #fff;
+        font-size: 0.62rem;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 999px;
+        border: 2px solid #001a45;
+        white-space: nowrap;
+        z-index: 2;
+        letter-spacing: 0.3px;
+        animation: bpulse 2s infinite;
+      }
+
+      @keyframes bpulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.13);
+        }
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: #25d366;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+
+      .btn:hover {
+        background: #1ebe5a;
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+      .btn svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
+      /* WhatsApp Channel — white pill */
+      .btn-channel {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: #fff;
+        color: #075e54;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border: 2px solid #25d366;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+
+      .btn-channel:hover {
+        background: #e6faf0;
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+      .btn-channel svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        background: #25d366;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+        animation: bpulse 1.6s infinite;
+      }
+
+      /* ── Misc ── */
+      a {
+        color: #7dff9a;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 20px;
+        color: #ddd;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <h1>STARHELA</h1>
+        <h2>Coming Soon</h2>
+        <p>
+          We are launching on <strong>2nd May, 2:00 PM</strong>. Be ready —
+          exciting new features and products designed to help you earn money
+          online.
+        </p>
+
+        <div class="timer">
+          <div class="box">
+            <div class="num" id="days">00</div>
+            <div class="label">Days</div>
+          </div>
+          <div class="box">
+            <div class="num" id="hours">00</div>
+            <div class="label">Hours</div>
+          </div>
+          <div class="box">
+            <div class="num" id="mins">00</div>
+            <div class="label">Mins</div>
+          </div>
+          <div class="box">
+            <div class="num" id="secs">00</div>
+            <div class="label">Secs</div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <h3>Follow Us For Updates</h3>
+
+          <div class="buttons">
+            <!-- WhatsApp Chat with pulsing badge + pre-filled message -->
+            <div class="wa-wrap">
+              <div class="badge">Chat with Agent!</div>
+              <a
+                class="btn"
+                href="https://wa.me/254745656143?text=Hello%2C%20I'm%20interested%20in%20Starhela.%20Add%20me%20to%20your%20pre-mentorship%20team."
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.975-1.418A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.898 13.766c-.205.576-1.2 1.1-1.654 1.17-.42.063-.948.09-1.53-.097-.353-.113-.806-.264-1.387-.517-2.44-1.054-4.03-3.507-4.152-3.67-.123-.163-.99-1.317-.99-2.513 0-1.197.627-1.786.85-2.03.222-.244.483-.305.644-.305.16 0 .32.002.46.009.148.007.346-.056.54.413.201.484.681 1.672.74 1.793.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.252.312-.36.42-.12.12-.245.25-.105.49.14.24.62.964 1.33 1.563.913.786 1.685 1.03 1.925 1.145.24.115.38.097.52-.058.14-.155.6-.698.76-.937.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.145 1.155z"
+                  />
+                </svg>
+                WhatsApp Chat
+              </a>
+            </div>
+
+            <!-- WhatsApp Channel with live dot -->
+            <a
+              class="btn-channel"
+              href="https://whatsapp.com/channel/0029Vb6b9yy7oQhYygIaY30X"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="#25d366"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.975-1.418A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.898 13.766c-.205.576-1.2 1.1-1.654 1.17-.42.063-.948.09-1.53-.097-.353-.113-.806-.264-1.387-.517-2.44-1.054-4.03-3.507-4.152-3.67-.123-.163-.99-1.317-.99-2.513 0-1.197.627-1.786.85-2.03.222-.244.483-.305.644-.305.16 0 .32.002.46.009.148.007.346-.056.54.413.201.484.681 1.672.74 1.793.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.252.312-.36.42-.12.12-.245.25-.105.49.14.24.62.964 1.33 1.563.913.786 1.685 1.03 1.925 1.145.24.115.38.097.52-.058.14-.155.6-.698.76-.937.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.145 1.155z"
+                />
+              </svg>
+              <span class="live-dot"></span>
+              Join Our WhatsApp Channel
+            </a>
+          </div>
+
+          <p style="margin-top: 14px">
+            Contact: <a href="tel:+254745656143">+254 745 656 143</a>
+          </p>
+        </div>
+
+        <footer>© 2026 STARHELA. All rights reserved.</footer>
+      </div>
+    </section>
+
+    <script>
+      const targetDate = new Date("2026-05-02T14:00:00");
+      function updateCountdown() {
+        const now = new Date();
+        let diff = targetDate - now;
+        if (diff < 0) diff = 0;
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+        document.getElementById("days").textContent = String(d).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("hours").textContent = String(h).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("mins").textContent = String(m).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("secs").textContent = String(s).padStart(
+          2,
+          "0",
+        );
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
