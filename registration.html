@@ -66,7 +66,6 @@
         color: #f0f0f0;
       }
 
-      /* ── Countdown ── */
       .timer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -98,7 +97,80 @@
         color: #111;
       }
 
-      /* ── Contact card ── */
+      .email-capture {
+        margin: 20px auto 0;
+        max-width: 500px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 60px;
+        padding: 6px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .email-capture input {
+        flex: 1;
+        min-width: 200px;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        background: #fff;
+        color: #111;
+        outline: none;
+      }
+
+      .email-capture input::placeholder {
+        color: #888;
+      }
+
+      .email-capture button {
+        background: #ff3d7a;
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+
+      .email-capture button:hover {
+        background: #e62e68;
+        transform: scale(1.02);
+      }
+
+      .email-capture button:disabled {
+        background: #999;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .success-msg {
+        margin-top: 12px;
+        font-size: 0.85rem;
+        color: #7dff9a;
+        display: none;
+      }
+
+      .error-msg {
+        margin-top: 12px;
+        font-size: 0.85rem;
+        color: #ff8888;
+        display: none;
+      }
+
+      .loading-msg {
+        margin-top: 12px;
+        font-size: 0.85rem;
+        color: #ffd966;
+        display: none;
+      }
+
       .contact {
         margin-top: 35px;
         background: rgba(255, 255, 255, 0.08);
@@ -112,7 +184,6 @@
         margin-bottom: 4px;
       }
 
-      /* ── Buttons row ── */
       .buttons {
         display: flex;
         gap: 14px;
@@ -122,7 +193,6 @@
         align-items: center;
       }
 
-      /* WhatsApp Chat — green pill */
       .wa-wrap {
         position: relative;
         display: inline-block;
@@ -182,7 +252,6 @@
         flex-shrink: 0;
       }
 
-      /* WhatsApp Channel — white pill */
       .btn-channel {
         display: inline-flex;
         align-items: center;
@@ -221,7 +290,15 @@
         animation: bpulse 1.6s infinite;
       }
 
-      /* ── Misc ── */
+      .email-link {
+        color: #7dff9a;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .email-link:hover {
+        text-decoration: underline;
+      }
+
       a {
         color: #7dff9a;
         text-decoration: none;
@@ -234,6 +311,29 @@
         margin-top: 20px;
         color: #ddd;
         font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        .box {
+          width: 90px;
+          height: 90px;
+        }
+        .num {
+          font-size: 1.5rem;
+        }
+        .label {
+          font-size: 0.75rem;
+        }
+        .email-capture {
+          border-radius: 30px;
+        }
+        .email-capture input {
+          padding: 10px 16px;
+          min-width: 160px;
+        }
+        .email-capture button {
+          padding: 10px 20px;
+        }
       }
     </style>
   </head>
@@ -267,63 +367,62 @@
           </div>
         </div>
 
-        <div class="contact">
-          <h3>Follow Us For Updates</h3>
-
-          <div class="buttons">
-            <!-- WhatsApp Chat with pulsing badge + pre-filled message -->
-            <div class="wa-wrap">
-              <div class="badge">Chat with Agent!</div>
-              <a
-                class="btn"
-                href="https://wa.me/254745656143?text=Hello%2C%20I'm%20interested%20in%20Starhela.%20Add%20me%20to%20your%20pre-mentorship%20team."
-                target="_blank"
-                rel="noopener"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.975-1.418A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.898 13.766c-.205.576-1.2 1.1-1.654 1.17-.42.063-.948.09-1.53-.097-.353-.113-.806-.264-1.387-.517-2.44-1.054-4.03-3.507-4.152-3.67-.123-.163-.99-1.317-.99-2.513 0-1.197.627-1.786.85-2.03.222-.244.483-.305.644-.305.16 0 .32.002.46.009.148.007.346-.056.54.413.201.484.681 1.672.74 1.793.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.252.312-.36.42-.12.12-.245.25-.105.49.14.24.62.964 1.33 1.563.913.786 1.685 1.03 1.925 1.145.24.115.38.097.52-.058.14-.155.6-.698.76-.937.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.145 1.155z"
-                  />
-                </svg>
-                WhatsApp Chat
-              </a>
-            </div>
-
-            <!-- WhatsApp Channel with live dot -->
-            <a
-              class="btn-channel"
-              href="https://whatsapp.com/channel/0029Vb6b9yy7oQhYygIaY30X"
-              target="_blank"
-              rel="noopener"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="#25d366"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.975-1.418A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.898 13.766c-.205.576-1.2 1.1-1.654 1.17-.42.063-.948.09-1.53-.097-.353-.113-.806-.264-1.387-.517-2.44-1.054-4.03-3.507-4.152-3.67-.123-.163-.99-1.317-.99-2.513 0-1.197.627-1.786.85-2.03.222-.244.483-.305.644-.305.16 0 .32.002.46.009.148.007.346-.056.54.413.201.484.681 1.672.74 1.793.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.252.312-.36.42-.12.12-.245.25-.105.49.14.24.62.964 1.33 1.563.913.786 1.685 1.03 1.925 1.145.24.115.38.097.52-.058.14-.155.6-.698.76-.937.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.145 1.155z"
-                />
-              </svg>
-              <span class="live-dot"></span>
-              Join Our WhatsApp Channel
-            </a>
-          </div>
-
-          <p style="margin-top: 14px">
-            Contact: <a href="tel:+254745656143">+254 745 656 143</a>
-          </p>
+        <!-- Email Capture Form - Connected to Formspree -->
+        <div class="email-capture">
+          <input
+            type="email"
+            id="visitorEmail"
+            placeholder="Enter your email to get notified"
+            required
+          />
+          <button id="notifyBtn">Notify Me</button>
+        </div>
+        <div id="loadingMsg" class="loading-msg">⏳ Submitting...</div>
+        <div id="successMsg" class="success-msg">
+          ✓ Thanks! We'll notify you at <span id="submittedEmail"></span>
+        </div>
+        <div id="errorMsg" class="error-msg">
+          ✗ Something went wrong. Please try again or contact us directly.
         </div>
 
-        <footer>© 2026 STARHELA. All rights reserved.</footer>
+        <div class="contact">
+          <h3>Follow Us For Updates</h3>
+          <a
+            class="btn-channel"
+            href="https://whatsapp.com/channel/0029Vb6b9yy7oQhYygIaY30X"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="#25d366"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.975-1.418A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.898 13.766c-.205.576-1.2 1.1-1.654 1.17-.42.063-.948.09-1.53-.097-.353-.113-.806-.264-1.387-.517-2.44-1.054-4.03-3.507-4.152-3.67-.123-.163-.99-1.317-.99-2.513 0-1.197.627-1.786.85-2.03.222-.244.483-.305.644-.305.16 0 .32.002.46.009.148.007.346-.056.54.413.201.484.681 1.672.74 1.793.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.252.312-.36.42-.12.12-.245.25-.105.49.14.24.62.964 1.33 1.563.913.786 1.685 1.03 1.925 1.145.24.115.38.097.52-.058.14-.155.6-.698.76-.937.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.145 1.155z"
+              />
+            </svg>
+            <span class="live-dot"></span>
+            Join Our WhatsApp Channel
+          </a>
+        </div>
+
+        <p style="margin-top: 14px">
+          📧 Email:
+          <a href="mailto:starhelaagencie@gmail.com" class="email-link"
+            >starhelaagencie@gmail.com</a
+          >
+        </p>
       </div>
     </section>
 
     <script>
+      // ============================================
+      // FORMSPREE INTEGRATION
+
+      const FORMSPREE_URL = "https://formspree.io/f/xvzddnwq";
+
+      // Countdown timer
       const targetDate = new Date("2026-05-02T14:00:00");
       function updateCountdown() {
         const now = new Date();
@@ -352,6 +451,101 @@
       }
       updateCountdown();
       setInterval(updateCountdown, 1000);
+
+      // Email capture elements
+      const notifyBtn = document.getElementById("notifyBtn");
+      const emailInput = document.getElementById("visitorEmail");
+      const successMsg = document.getElementById("successMsg");
+      const errorMsg = document.getElementById("errorMsg");
+      const loadingMsg = document.getElementById("loadingMsg");
+      const submittedEmailSpan = document.getElementById("submittedEmail");
+
+      function hideMessages() {
+        successMsg.style.display = "none";
+        errorMsg.style.display = "none";
+        loadingMsg.style.display = "none";
+      }
+
+      function saveToLocalStorage(email) {
+        let emails = JSON.parse(
+          localStorage.getItem("starhela_emails") || "[]",
+        );
+        if (!emails.includes(email)) {
+          emails.push(email);
+          localStorage.setItem("starhela_emails", JSON.stringify(emails));
+        }
+      }
+
+      async function submitToFormspree(email) {
+        const response = await fetch(FORMSPREE_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({ email: email }),
+        });
+
+        if (response.ok) {
+          return true;
+        } else {
+          const data = await response.json();
+          throw new Error(data.error || "Formspree error");
+        }
+      }
+
+      notifyBtn.addEventListener("click", async () => {
+        const email = emailInput.value.trim();
+
+        // Validate email
+        if (!email || !email.includes("@") || !email.includes(".")) {
+          alert("Please enter a valid email address (e.g., name@example.com)");
+          return;
+        }
+
+        hideMessages();
+        loadingMsg.style.display = "block";
+        notifyBtn.disabled = true;
+
+        try {
+          // Submit to Formspree - THIS WILL EMAIL YOU AUTOMATICALLY!
+          await submitToFormspree(email);
+
+          // Save to localStorage as backup
+          saveToLocalStorage(email);
+
+          // Show success to user
+          submittedEmailSpan.textContent = email;
+          loadingMsg.style.display = "none";
+          successMsg.style.display = "block";
+          emailInput.value = "";
+
+          // Auto-hide success message after 5 seconds
+          setTimeout(() => {
+            successMsg.style.display = "none";
+          }, 5000);
+        } catch (err) {
+          console.error("Submission error:", err);
+          loadingMsg.style.display = "none";
+          errorMsg.style.display = "block";
+
+          setTimeout(() => {
+            errorMsg.style.display = "none";
+          }, 5000);
+        } finally {
+          notifyBtn.disabled = false;
+        }
+      });
+
+      // Allow Enter key to submit
+      emailInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          notifyBtn.click();
+        }
+      });
+
+      // Console log for debugging (remove in production)
+      console.log("✅ Formspree connected! Endpoint:", FORMSPREE_URL);
     </script>
   </body>
 </html>
