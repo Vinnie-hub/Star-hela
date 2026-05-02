@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
     />
-    <title>STARHELA — Platform is Live</title>
+    <title>STARHELA — Registration page</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -57,332 +57,10 @@
         background-clip: text;
         color: transparent;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
       }
 
-      h2 {
-        font-size: clamp(2rem, 5vw, 4rem);
-        font-weight: 300;
-        margin-bottom: 18px;
-      }
-
-      p {
-        font-size: 1.15rem;
-        max-width: 760px;
-        margin: 0 auto 28px;
-        line-height: 1.6;
-        color: #f0f0f0;
-      }
-
-      .timer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 18px;
-        max-width: 700px;
-        margin: 25px auto;
-      }
-
-      .box {
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(4px);
-        border-radius: 50%;
-        width: 130px;
-        height: 130px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s;
-      }
-      .box:hover {
-        transform: scale(1.02);
-      }
-
-      .num {
-        font-size: 2.5rem;
-        color: #ff3d7a;
-        font-weight: 800;
-      }
-      .label {
-        font-weight: 700;
-        color: #111;
-        letter-spacing: 1px;
-      }
-
-      /* Registration mega button (hidden initially) */
-      .registration-block {
-        margin: 25px auto 20px;
-        text-align: center;
-        display: none;
-        animation: fadeZoom 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      }
-      .register-btn {
-        background: linear-gradient(105deg, #ff3d7a 0%, #e6326b 100%);
-        border: none;
-        padding: 18px 45px;
-        font-size: 1.8rem;
-        font-weight: 800;
-        border-radius: 80px;
-        color: white;
-        cursor: pointer;
-        transition: all 0.25s ease;
-        box-shadow:
-          0 12px 28px rgba(0, 0, 0, 0.3),
-          0 0 0 1px rgba(255, 255, 255, 0.2);
-        font-family: inherit;
-        letter-spacing: 2px;
-      }
-      .register-btn:hover {
-        transform: scale(1.02) translateY(-3px);
-        background: linear-gradient(105deg, #ff2060, #dc2c60);
-        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
-      }
-      .register-btn:active {
-        transform: scale(0.98);
-      }
-      .register-hint {
-        margin-top: 15px;
-        font-size: 0.95rem;
-        background: rgba(0, 0, 0, 0.5);
-        display: inline-block;
-        padding: 6px 18px;
-        border-radius: 50px;
-        backdrop-filter: blur(8px);
-        font-weight: 500;
-      }
-
-      /* email capture group — will be hidden after launch via JS */
-      .email-capture {
-        margin: 20px auto 0;
-        max-width: 500px;
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(8px);
-        border-radius: 60px;
-        padding: 6px;
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .email-capture input {
-        flex: 1;
-        min-width: 200px;
-        padding: 14px 20px;
-        border: none;
-        border-radius: 50px;
-        font-size: 1rem;
-        background: #fff;
-        color: #111;
-        outline: none;
-      }
-
-      .email-capture button {
-        background: #ff3d7a;
-        color: #fff;
-        border: none;
-        padding: 14px 28px;
-        border-radius: 50px;
-        font-weight: 700;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.2s;
-        white-space: nowrap;
-      }
-
-      .email-capture button:hover {
-        background: #e62e68;
-        transform: scale(1.02);
-      }
-
-      .email-capture button:disabled {
-        background: #999;
-        cursor: not-allowed;
-        transform: none;
-      }
-
-      .success-msg {
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #7dff9a;
-        display: none;
-      }
-
-      .error-msg {
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #ff8888;
-        display: none;
-      }
-
-      .loading-msg {
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #ffd966;
-        display: none;
-      }
-
-      /* contact section and badges */
-      .contact {
-        margin-top: 35px;
-        background: rgba(255, 255, 255, 0.08);
-        padding: 22px 20px;
-        border-radius: 18px;
-        backdrop-filter: blur(6px);
-      }
-
-      .contact h3 {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
-      }
-
-      .buttons {
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 18px;
-        align-items: center;
-      }
-
-      .wa-wrap {
-        position: relative;
-        display: inline-block;
-      }
-
-      .badge {
-        position: absolute;
-        top: -9px;
-        right: -10px;
-        background: #ef4444;
-        color: #fff;
-        font-size: 0.62rem;
-        font-weight: 800;
-        padding: 3px 8px;
-        border-radius: 999px;
-        border: 2px solid #001a45;
-        white-space: nowrap;
-        z-index: 2;
-        animation: bpulse 2s infinite;
-      }
-
-      @keyframes bpulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.13);
-        }
-      }
-
-      @keyframes fadeZoom {
-        0% {
-          opacity: 0;
-          transform: scale(0.92);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 22px;
-        border-radius: 999px;
-        background: #25d366;
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-decoration: none;
-        transition:
-          background 0.2s,
-          transform 0.15s;
-      }
-
-      .btn:hover {
-        background: #1ebe5a;
-        transform: translateY(-1px);
-        text-decoration: none;
-      }
-      .btn svg {
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-      }
-
-      .btn-channel {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 22px;
-        border-radius: 999px;
-        background: #fff;
-        color: #075e54;
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-decoration: none;
-        border: 2px solid #25d366;
-        transition:
-          background 0.2s,
-          transform 0.15s;
-      }
-
-      .btn-channel:hover {
-        background: #e6faf0;
-        transform: translateY(-1px);
-        text-decoration: none;
-      }
-      .btn-channel svg {
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-      }
-
-      .live-dot {
-        width: 8px;
-        height: 8px;
-        background: #25d366;
-        border-radius: 50%;
-        display: inline-block;
-        flex-shrink: 0;
-        animation: bpulse 1.6s infinite;
-      }
-
-      .email-link {
-        color: #7dff9a;
-        font-weight: 600;
-        text-decoration: none;
-      }
-      .email-link:hover {
-        text-decoration: underline;
-      }
-
-      footer {
-        margin-top: 20px;
-        color: #ddd;
-        font-size: 0.95rem;
-      }
-
-      /* Hide timer container when registration mode is active */
-      .timer-container.hide-timer {
-        display: none;
-      }
-
-      .info-after-launch {
-        background: rgba(0, 0, 0, 0.4);
-        padding: 8px 14px;
-        border-radius: 60px;
-        display: inline-block;
-        margin-top: 6px;
-        font-size: 0.9rem;
-      }
-
-      /* ========= POST-LAUNCH ENHANCEMENTS ========= */
-      /* Premium live badge styling */
+      /* Premium live badge */
       .live-premium-badge {
         display: inline-flex;
         align-items: center;
@@ -396,7 +74,7 @@
         padding: 8px 24px;
         border-radius: 60px;
         border: 1px solid rgba(255, 61, 122, 0.5);
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       }
       .pulse-indicator {
@@ -424,7 +102,7 @@
         color: #fff;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       }
-      /* Post-launch headline polish */
+      /* Headline style */
       .post-launch-headline {
         background: linear-gradient(135deg, #ffd966, #ffb347);
         -webkit-background-clip: text;
@@ -432,75 +110,170 @@
         color: transparent;
         font-weight: 700;
       }
-      /* Enhanced description card */
+
+      /* Description card */
       .post-launch-description {
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(10px);
         border-radius: 32px;
-        padding: 22px 28px;
-        margin: 25px auto 20px;
+        padding: 28px 30px;
+        margin: 20px auto 28px;
         max-width: 760px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
       }
       .post-launch-description p {
         margin: 0;
-        font-size: 1.18rem;
+        font-size: 1.2rem;
         font-weight: 500;
+        line-height: 1.5;
+        color: #fef9e8;
       }
-      /* registration button premium hover */
-      .register-btn-premium {
-        background: linear-gradient(105deg, #ff3d7a, #c0265a);
+      .post-launch-description strong {
+        color: #ffb347;
+      }
+
+      /* Registration button */
+      .registration-block {
+        margin: 20px auto 20px;
+        text-align: center;
+        animation: fadeZoom 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      }
+      .register-btn {
+        background: linear-gradient(105deg, #ff3d7a 0%, #e6326b 100%);
+        border: none;
+        padding: 18px 45px;
+        font-size: 1.8rem;
+        font-weight: 800;
+        border-radius: 80px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         box-shadow:
           0 18px 32px rgba(255, 61, 122, 0.3),
           0 0 0 1px rgba(255, 255, 255, 0.25);
-        transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        font-family: inherit;
+        letter-spacing: 2px;
       }
-      .register-btn-premium:hover {
+      .register-btn:hover {
         transform: scale(1.03) translateY(-4px);
+        background: linear-gradient(105deg, #ff2060, #dc2c60);
         box-shadow: 0 28px 40px rgba(255, 61, 122, 0.4);
       }
-      /* hint styled better */
-      .premium-hint {
+      .register-btn:active {
+        transform: scale(0.98);
+      }
+      .register-hint {
+        margin-top: 18px;
+        font-size: 0.95rem;
         background: rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(10px);
+        display: inline-block;
+        padding: 8px 22px;
+        border-radius: 50px;
         font-weight: 600;
         letter-spacing: 0.3px;
         border: 1px solid rgba(255, 215, 0, 0.3);
-        margin-top: 18px;
-      }
-      /* Hide email capture group instantly after launch */
-      .email-capture.hide-email-group {
-        display: none !important;
       }
 
+      /* Contact section */
+      .contact {
+        margin-top: 35px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 22px 20px;
+        border-radius: 18px;
+        backdrop-filter: blur(6px);
+      }
+      .contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+      .buttons {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 18px;
+        align-items: center;
+      }
+      .btn-channel {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: #fff;
+        color: #075e54;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border: 2px solid #25d366;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .btn-channel:hover {
+        background: #e6faf0;
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+      .btn-channel svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        background: #25d366;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+        animation: bpulse 1.6s infinite;
+      }
+      @keyframes bpulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.13);
+        }
+      }
+      .email-link {
+        color: #7dff9a;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .email-link:hover {
+        text-decoration: underline;
+      }
+      @keyframes fadeZoom {
+        0% {
+          opacity: 0;
+          transform: scale(0.92);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
       @media (max-width: 480px) {
-        .box {
-          width: 90px;
-          height: 90px;
-        }
-        .num {
-          font-size: 1.7rem;
-        }
-        .label {
-          font-size: 0.7rem;
-        }
         .register-btn {
           font-size: 1.3rem;
           padding: 14px 30px;
         }
-        .email-capture {
-          border-radius: 30px;
-        }
-        .email-capture input {
-          padding: 10px 16px;
-          min-width: 160px;
-        }
-        .email-capture button {
-          padding: 10px 20px;
-        }
         .post-launch-description {
-          padding: 16px 18px;
+          padding: 18px 20px;
+        }
+        .post-launch-description p {
+          font-size: 1rem;
+        }
+        .live-premium-badge {
+          padding: 6px 18px;
+        }
+        .register-hint {
+          font-size: 0.8rem;
         }
       }
     </style>
@@ -508,64 +281,39 @@
   <body>
     <section class="hero">
       <div class="container">
-        <h1>STARHELA</h1>
-        <h2 id="mainHeadline">Coming Soon</h2>
-        <p id="descriptionText">
-          We are launching on <strong>2nd May, 2:00 PM</strong>. Be ready —
-          exciting new features and products designed to help you earn money
-          online.
-        </p>
-
-        <!-- TIMER SECTION (will be hidden after launch) -->
-        <div id="timerWrapper" class="timer-container">
-          <div class="timer">
-            <div class="box">
-              <div class="num" id="days">00</div>
-              <div class="label">Days</div>
-            </div>
-            <div class="box">
-              <div class="num" id="hours">00</div>
-              <div class="label">Hours</div>
-            </div>
-            <div class="box">
-              <div class="num" id="mins">00</div>
-              <div class="label">Mins</div>
-            </div>
-            <div class="box">
-              <div class="num" id="secs">00</div>
-              <div class="label">Secs</div>
-            </div>
-          </div>
+        <!-- Live badge -->
+        <div class="live-premium-badge">
+          <div class="pulse-indicator"></div>
+          <span>🔴 PLATFORM IS LIVE</span>
         </div>
 
-        <!-- REGISTRATION BUTTON BLOCK (appears automatically after launch) -->
-        <div id="registrationBlock" class="registration-block">
-          <button id="dynamicRegisterBtn" class="register-btn">
+        <h1>STARHELA</h1>
+
+        <!-- Premium description card: Brief and action-oriented -->
+        <div class="post-launch-description">
+          <p>
+            🚀
+            <strong
+              >To get started in STARHELA, complete your registration
+              now.</strong
+            ><br />
+            Unlock earning opportunities, premium tools, and a thriving
+            community.<br />
+            Your future starts here — claim your spot today.
+          </p>
+        </div>
+
+        <!-- Registration button -->
+        <div class="registration-block">
+          <button id="registerNowBtn" class="register-btn">
             🚀 REGISTER NOW
           </button>
           <div class="register-hint">
-            ✨ Limited spots – Join the STARHELA community ✨
+            ✨ Limited spots — Join the movement. Instant access ✨
           </div>
         </div>
 
-        <!-- Email Capture Form - will be hidden after launch -->
-        <div id="emailCaptureGroup" class="email-capture">
-          <input
-            type="email"
-            id="visitorEmail"
-            placeholder="Enter your email to get notified"
-            required
-          />
-          <button id="notifyBtn">Notify Me</button>
-        </div>
-        <div id="loadingMsg" class="loading-msg">⏳ Submitting...</div>
-        <div id="successMsg" class="success-msg">
-          ✓ Thanks! We'll notify you at <span id="submittedEmail"></span>
-        </div>
-        <div id="errorMsg" class="error-msg">
-          ✗ Something went wrong. Please try again or contact us directly.
-        </div>
-
+        <!-- Community & contact -->
         <div class="contact">
           <h3>Follow Us For Updates</h3>
           <div class="buttons">
@@ -601,298 +349,22 @@
     </section>
 
     <script>
+      // STARHELA - POST LAUNCH PAGE (Clean & Professional)
+      // Registration redirect: https://starhela.com/register.php?ref=sydney
       (function () {
-        // --- CONFIGURATION ---
-        const TARGET_DATE_STR = "2026-05-02T14:00:00"; // May 2, 2026 2:00 PM
         const REGISTER_URL = "https://starhela.com/register.php?ref=sydney";
+        const registerButton = document.getElementById("registerNowBtn");
 
-        // DOM elements
-        const timerContainer = document.getElementById("timerWrapper");
-        const registrationDiv = document.getElementById("registrationBlock");
-        const daysSpan = document.getElementById("days");
-        const hoursSpan = document.getElementById("hours");
-        const minsSpan = document.getElementById("mins");
-        const secsSpan = document.getElementById("secs");
-        const mainHeadline = document.getElementById("mainHeadline");
-        const descriptionPara = document.getElementById("descriptionText");
-        const registerBtn = document.getElementById("dynamicRegisterBtn");
-        const emailCaptureGroup = document.getElementById("emailCaptureGroup");
-
-        // Helper: check if launch time has passed
-        function isLaunchTimePassed(targetDateObj) {
-          const now = new Date();
-          return now >= targetDateObj;
-        }
-
-        // Enhanced post-launch UI improvements: modern, polished with badge and card
-        function enhancePostLaunchUI() {
-          // 1) Add a premium "LIVE" badge above headline
-          const containerDiv = document.querySelector(".container");
-          const existingBadge = document.querySelector(".live-premium-badge");
-          if (
-            !existingBadge &&
-            containerDiv &&
-            !document.getElementById("dynamicLiveBadge")
-          ) {
-            const liveBadge = document.createElement("div");
-            liveBadge.className = "live-premium-badge";
-            liveBadge.id = "dynamicLiveBadge";
-            liveBadge.innerHTML = `<div class="pulse-indicator"></div><span>🔴 PLATFORM IS LIVE</span>`;
-            // Insert after h1 or before h2
-            const h1El = document.querySelector("h1");
-            if (h1El && h1El.nextSibling) {
-              containerDiv.insertBefore(liveBadge, h1El.nextSibling);
-            } else {
-              containerDiv.prepend(liveBadge);
-            }
-          }
-
-          // Improve headline style with gradient emphasis if needed
-          if (mainHeadline) {
-            mainHeadline.innerHTML = `🎉 <span class="post-launch-headline">REGISTRATION OPEN</span> 🎉`;
-          }
-
-          // Wrap description into a sleek card (if not already modified)
-          if (descriptionPara && descriptionPara.parentNode) {
-            const parent = descriptionPara.parentNode;
-            const existingCard = document.querySelector(
-              ".post-launch-description",
-            );
-            if (!existingCard) {
-              const cardWrapper = document.createElement("div");
-              cardWrapper.className = "post-launch-description";
-              descriptionPara.parentNode.insertBefore(
-                cardWrapper,
-                descriptionPara,
-              );
-              cardWrapper.appendChild(descriptionPara);
-              descriptionPara.style.margin = "0";
-            } else {
-              // if already present just ensure content
-              if (!existingCard.contains(descriptionPara)) {
-                existingCard.innerHTML = "";
-                existingCard.appendChild(descriptionPara);
-                descriptionPara.style.margin = "0";
-              }
-            }
-            // set final text (professional)
-            descriptionPara.innerHTML = `<strong>✨ STARHELA is officially live!</strong> Start your journey now — cutting-edge tools, earning opportunities, and a vibrant community await. Join today and claim your spot.`;
-          } else {
-            // fallback
-            if (descriptionPara)
-              descriptionPara.innerHTML = `<strong>STARHELA is LIVE!</strong> Join now and start your journey. Click the button below to register instantly and unlock earning opportunities. Be part of the future.`;
-          }
-
-          // Style register button with premium class and add subtle micro-interactions
-          if (registerBtn) {
-            registerBtn.classList.add("register-btn-premium");
-            const hintDiv = document.querySelector(
-              ".registration-block .register-hint",
-            );
-            if (hintDiv) {
-              hintDiv.classList.add("premium-hint");
-              hintDiv.innerHTML = `🌟 Exclusive access — Limited enrollment. Start earning today. 🌟`;
-            }
-          }
-        }
-
-        // Hide email capture group permanently after launch
-        function hideEmailCapture() {
-          if (emailCaptureGroup) {
-            emailCaptureGroup.classList.add("hide-email-group");
-          }
-          // Also hide any associated messages/info (optional but cleaner)
-          const successMsgDiv = document.getElementById("successMsg");
-          const errorMsgDiv = document.getElementById("errorMsg");
-          const loadingMsgDiv = document.getElementById("loadingMsg");
-          if (successMsgDiv) successMsgDiv.style.display = "none";
-          if (errorMsgDiv) errorMsgDiv.style.display = "none";
-          if (loadingMsgDiv) loadingMsgDiv.style.display = "none";
-        }
-
-        // Switch UI to "LAUNCHED" mode: hide timer, show Register button, hide Notify Me, update wording + premium polish
-        function activateRegistrationMode() {
-          // Hide timer section completely
-          if (timerContainer) timerContainer.classList.add("hide-timer");
-          // Show registration block
-          if (registrationDiv) registrationDiv.style.display = "block";
-
-          // Hide the entire email capture group
-          hideEmailCapture();
-
-          // Apply advanced post-launch UI enhancements (badge, card, premium styling)
-          enhancePostLaunchUI();
-
-          // Re-attach redirect to the register button (ensure redirection works with premium styling)
-          if (registerBtn) {
-            const newBtn = registerBtn.cloneNode(true);
-            registerBtn.parentNode.replaceChild(newBtn, registerBtn);
-            newBtn.addEventListener("click", (e) => {
-              e.preventDefault();
-              window.location.href = REGISTER_URL;
-            });
-          } else {
-            const btn = document.getElementById("dynamicRegisterBtn");
-            if (btn) {
-              btn.addEventListener("click", () => {
-                window.location.href = REGISTER_URL;
-              });
-            }
-          }
-        }
-
-        const targetDate = new Date(TARGET_DATE_STR);
-
-        // Early check: if already launched, apply registration UI before any timer starts
-        if (isLaunchTimePassed(targetDate)) {
-          // Immediately switch to launched state
-          if (timerContainer) timerContainer.classList.add("hide-timer");
-          if (registrationDiv) registrationDiv.style.display = "block";
-          hideEmailCapture();
-          enhancePostLaunchUI();
-          // set register button redirection
-          if (registerBtn) {
-            const freshBtn = registerBtn.cloneNode(true);
-            registerBtn.parentNode.replaceChild(freshBtn, registerBtn);
-            freshBtn.addEventListener("click", (e) => {
-              e.preventDefault();
-              window.location.href = REGISTER_URL;
-            });
-          }
-          if (daysSpan) daysSpan.innerText = "00";
-          if (hoursSpan) hoursSpan.innerText = "00";
-          if (minsSpan) minsSpan.innerText = "00";
-          if (secsSpan) secsSpan.innerText = "00";
-        } else {
-          // Timer not expired yet: run countdown and monitor expiration
-          function updateCountdown() {
-            const now = new Date();
-            let diff = targetDate - now;
-            let expired = false;
-            if (diff <= 0) {
-              diff = 0;
-              expired = true;
-            }
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const m = Math.floor((diff / (1000 * 60)) % 60);
-            const s = Math.floor((diff / 1000) % 60);
-
-            if (daysSpan) daysSpan.textContent = String(d).padStart(2, "0");
-            if (hoursSpan) hoursSpan.textContent = String(h).padStart(2, "0");
-            if (minsSpan) minsSpan.textContent = String(m).padStart(2, "0");
-            if (secsSpan) secsSpan.textContent = String(s).padStart(2, "0");
-
-            if (expired && !window._launchModeActivated) {
-              window._launchModeActivated = true;
-              activateRegistrationMode();
-              if (window.countdownInterval)
-                clearInterval(window.countdownInterval);
-            }
-          }
-
-          updateCountdown();
-          window.countdownInterval = setInterval(updateCountdown, 1000);
-        }
-
-        const FORMSPREE_URL = "https://formspree.io/f/xrejgajg";
-        const notifyBtn = document.getElementById("notifyBtn");
-        const emailInput = document.getElementById("visitorEmail");
-        const successMsgDiv = document.getElementById("successMsg");
-        const errorMsgDiv = document.getElementById("errorMsg");
-        const loadingMsgDiv = document.getElementById("loadingMsg");
-        const submittedEmailSpan = document.getElementById("submittedEmail");
-
-        function hideMessages() {
-          if (successMsgDiv) successMsgDiv.style.display = "none";
-          if (errorMsgDiv) errorMsgDiv.style.display = "none";
-          if (loadingMsgDiv) loadingMsgDiv.style.display = "none";
-        }
-
-        function saveToLocalStorage(email) {
-          try {
-            let emails = JSON.parse(
-              localStorage.getItem("starhela_emails") || "[]",
-            );
-            if (!emails.includes(email)) {
-              emails.push(email);
-              localStorage.setItem("starhela_emails", JSON.stringify(emails));
-            }
-          } catch (e) {
-            console.warn(e);
-          }
-        }
-
-        async function submitToFormspree(email) {
-          const response = await fetch(FORMSPREE_URL, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({ email: email }),
+        if (registerButton) {
+          registerButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = REGISTER_URL;
           });
-          if (response.ok) return true;
-          else {
-            const data = await response.json();
-            throw new Error(data.error || "Formspree error");
-          }
         }
 
-        if (notifyBtn && emailInput && !isLaunchTimePassed(targetDate)) {
-          notifyBtn.addEventListener("click", async () => {
-            const email = emailInput.value.trim();
-            if (!email || !email.includes("@") || !email.includes(".")) {
-              alert(
-                "Please enter a valid email address (e.g., name@example.com)",
-              );
-              return;
-            }
-            hideMessages();
-            if (loadingMsgDiv) loadingMsgDiv.style.display = "block";
-            notifyBtn.disabled = true;
-            try {
-              await submitToFormspree(email);
-              saveToLocalStorage(email);
-              if (submittedEmailSpan) submittedEmailSpan.textContent = email;
-              if (loadingMsgDiv) loadingMsgDiv.style.display = "none";
-              if (successMsgDiv) successMsgDiv.style.display = "block";
-              emailInput.value = "";
-              setTimeout(() => {
-                if (successMsgDiv) successMsgDiv.style.display = "none";
-              }, 5000);
-            } catch (err) {
-              console.error(err);
-              if (loadingMsgDiv) loadingMsgDiv.style.display = "none";
-              if (errorMsgDiv) errorMsgDiv.style.display = "block";
-              setTimeout(() => {
-                if (errorMsgDiv) errorMsgDiv.style.display = "none";
-              }, 5000);
-            } finally {
-              notifyBtn.disabled = false;
-            }
-          });
-          emailInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") notifyBtn.click();
-          });
-        } else if (isLaunchTimePassed(targetDate)) {
-          // already launched, ensure email group is hidden and no event listeners conflict
-          hideEmailCapture();
-        }
-
-        // Extra double-check: if launched, hide email capture group on any dynamic load
-        if (
-          isLaunchTimePassed(targetDate) &&
-          emailCaptureGroup &&
-          !emailCaptureGroup.classList.contains("hide-email-group")
-        ) {
-          hideEmailCapture();
-        }
-        console.log(
-          "✅ STARHELA — Post-launch improvements active: Notify Me hidden, premium live UI ready.",
-        );
+        // Optional: add subtle console info
+        console.log("✅ STARHELA — Platform is LIVE. Registration ready.");
       })();
     </script>
   </body>
 </html>
-```
