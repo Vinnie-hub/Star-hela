@@ -396,6 +396,11 @@
           display: none;
         }
       }
+      @media (max-width: 520px) {
+        .btn-login {
+          display: none;
+        }
+      }
 
       /* ════════════════════════════════════════
    MOBILE NAV
