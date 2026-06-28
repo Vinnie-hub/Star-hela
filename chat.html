@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Browse Chats – StarHela Chat &amp; Earn</title>
+    <meta
+      name="description"
+      content="Browse live psychics, coaches, companions and advisors on StarHela. Chat with experts from the UK, USA, Canada &amp; Qatar."
+    />
+    <meta
+      name="keywords"
+      content="StarHela, earn online, chatting jobs, online chatting, work from home Kenya, make money online, M-Pesa jobs"
+    />
+    <meta name="author" content="StarHela Agencies" />
+    <meta name="theme-color" content="#2f6bff" />
+    <link rel="canonical" href="https://starhelaagencies.com/chat.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png"
+    />
+
+    <link rel="stylesheet" href="css/chat.css" />
+  </head>
+  <body>
+    <!-- ══ NAV ══════════════════════════════════════════════ -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="logo" aria-label="StarHela home"
+          >STAR<span>HELA</span></a
+        >
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="chat.html" class="active" aria-current="page"
+              >Browse Chats</a
+            >
+          </li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#features">Features</a></li>
+        </ul>
+        <div class="nav-right">
+          <a
+            href="https://starhela.com/c/U3lkbmV5"
+            class="btn-ghost"
+            id="nav-signin"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            class="btn-primary"
+            id="nav-signup"
+            rel="noopener noreferrer"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══ MOBILE DRAWER ══════════════════════════════════════ -->
+    <div
+      class="mobile-drawer"
+      id="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="drawer-panel">
+        <nav class="drawer-nav-links" aria-label="Mobile navigation">
+          <a href="index.html">Home</a>
+          <a href="chat.html" class="active" aria-current="page"
+            >Browse Chats</a
+          >
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="index.html#features">Features</a>
+        </nav>
+        <div class="drawer-divider" role="separator"></div>
+        <div class="drawer-auth">
+          <a
+            href="https://starhela.com/c/U3lkbmV5"
+            class="btn-ghost"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            class="btn-primary"
+            rel="noopener noreferrer"
+            >Sign Up</a
+          >
+        </div>
+        <div class="drawer-divider" role="separator"></div>
+        <div>
+          <div class="drawer-filter-title" id="drawer-status-label">
+            Availability
+          </div>
+          <div
+            class="filter-options"
+            id="drawer-status-filters"
+            role="group"
+            aria-labelledby="drawer-status-label"
+          ></div>
+        </div>
+        <div>
+          <div class="drawer-filter-title" id="drawer-cat-label">Category</div>
+          <div
+            class="filter-options"
+            id="drawer-cat-filters"
+            role="group"
+            aria-labelledby="drawer-cat-label"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ LIVE ACTIVITY TICKER ═══════════════════════════════ -->
+    <div
+      class="live-ticker"
+      aria-live="polite"
+      aria-label="Live platform activity"
+    >
+      <div class="ticker-inner">
+        <div class="ticker-label">🔴 LIVE</div>
+        <div class="ticker-scroll" id="tickerScroll">
+          <!-- items injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ LIVE STATS BAR ════════════════════════════════════ -->
+    <div class="stats-bar" aria-label="Platform statistics">
+      <div class="stat-item">
+        <span class="stat-num" id="stat-advisors">--</span>
+        <span class="stat-label">Advisors Online</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-sessions">--</span>
+        <span class="stat-label">Active Sessions</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-members">--</span>
+        <span class="stat-label">Total Members</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-rating">--</span>
+        <span class="stat-label">Avg. Rating ★</span>
+      </div>
+    </div>
+
+    <!-- ══ HERO ══════════════════════════════════════════════ -->
+    <div class="hero">
+      <h1>Find Your Advisor</h1>
+      <p>
+        Connect with <strong id="hero-count">2,500+</strong> verified psychics,
+        coaches, companions &amp; more — available right now
+      </p>
+      <div class="search-bar" role="search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search advisors, topics, tags…"
+          aria-label="Search advisors"
+        />
+        <button id="search-btn" aria-label="Search">Search</button>
+      </div>
+    </div>
+
+    <!-- ══ MOBILE FILTER CHIPS ════════════════════════════════ -->
+    <div
+      class="mobile-filter-bar"
+      id="mobile-filter-bar"
+      role="group"
+      aria-label="Quick filters"
+    ></div>
+
+    <!-- ══ MAIN LAYOUT ════════════════════════════════════════ -->
+    <main class="main" id="main-content">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Filter advisors">
+        <div class="filter-box">
+          <div class="filter-title" id="sidebar-status-label">Availability</div>
+          <div
+            class="filter-options"
+            id="sidebar-status-filters"
+            role="group"
+            aria-labelledby="sidebar-status-label"
+          ></div>
+        </div>
+        <div class="filter-box">
+          <div class="filter-title" id="sidebar-cat-label">Category</div>
+          <div
+            class="filter-options"
+            id="sidebar-cat-filters"
+            role="group"
+            aria-labelledby="sidebar-cat-label"
+          ></div>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <div>
+        <div class="content-header">
+          <div
+            class="chips"
+            id="type-chips"
+            role="group"
+            aria-label="Advisor type filter"
+          ></div>
+          <select
+            class="sort-select"
+            id="sort-select"
+            aria-label="Sort advisors"
+          >
+            <option value="recent">Sort: Active first</option>
+            <option value="rating">Sort: Highest rated</option>
+            <option value="price-low">Sort: Price low–high</option>
+            <option value="price-high">Sort: Price high–low</option>
+          </select>
+        </div>
+        <div class="result-count" id="result-count" aria-live="polite"></div>
+        <div
+          class="advisor-grid"
+          id="advisor-grid"
+          role="list"
+          aria-label="Advisors"
+        ></div>
+      </div>
+    </main>
+
+    <!-- ══ SOCIAL PROOF TOASTS ════════════════════════════════ -->
+    <div
+      class="sp-toast"
+      id="spWrap"
+      aria-live="polite"
+      aria-label="Recent platform activity"
+    ></div>
+
+    <!-- ══ ADVISOR MODAL ══════════════════════════════════════ -->
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-name"
+    >
+      <div class="modal">
+        <div class="modal-top-bar" aria-hidden="true"></div>
+        <button class="modal-close-x" id="modal-close" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-profile">
+          <div class="modal-avatar" id="modal-avatar" aria-hidden="true"></div>
+          <div>
+            <div class="modal-name" id="modal-name"></div>
+            <div class="modal-handle" id="modal-handle"></div>
+            <div class="modal-status-pill" id="modal-status-pill"></div>
+          </div>
+        </div>
+        <hr class="modal-divider" />
+        <div class="modal-auth-wall">
+          <div class="auth-icon" aria-hidden="true">🔐</div>
+          <div class="auth-title">Sign up to start chatting</div>
+          <p class="auth-body">
+            Create your account to connect with
+            <strong id="modal-expert-name"></strong> and thousands of other
+            expert advisors.
+          </p>
+          <div class="auth-btn-row">
+            <button class="btn-reg" id="modal-register-btn">
+              Create Account
+            </button>
+            <button
+              class="btn-ghost"
+              id="modal-later-btn"
+              style="
+                margin-top: 4px;
+                font-size: 12px;
+                color: var(--text-muted);
+                border-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              Maybe later
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+    <footer class="page-footer">
+      <div class="page-footer-inner">
+        <a href="index.html" class="page-footer-home">← Back to StarHela</a>
+        <div class="page-footer-links">
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            rel="noopener noreferrer"
+            >Register</a
+          >
+          <a href="https://starhela.com/c/U3lkbmV5" rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a href="https://wa.me/254729743223" rel="noopener noreferrer"
+            >WhatsApp Support</a
+          >
+          <a href="mailto:starhelaofficials@gmail.com">Contact</a>
+        </div>
+        <div class="page-footer-copy">
+          &copy; 2025 StarHela &middot; 🌍 Trusted Worldwide
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/chat.js"></script>
+  </body>
+</html>

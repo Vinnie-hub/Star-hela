@@ -1,0 +1,3 @@
+User-agent: * 
+Allow: /  
+Sitemap: https://starhelaagencies.com/sitemap.xml  
