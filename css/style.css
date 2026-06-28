@@ -19,7 +19,7 @@
 
 /* ─── RESET ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html  { scroll-behavior: smooth; }
+html  { scroll-behavior: smooth; overflow-x: hidden; }
 body  { font-family: "Inter", sans-serif; color: var(--ink); background: var(--surface);
         line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 img   { display: block; max-width: 100%; }
@@ -168,7 +168,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 /* ─── STATS ──────────────────────────────────────────────── */
 .stats-bar   { background: var(--surface-2); border-bottom: 1px solid var(--border); }
-.stats-inner { display: flex; justify-content: space-around; flex-wrap: wrap;
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr);
                max-width: 1160px; margin: 0 auto; padding: 2.5rem 1.5rem; gap: 1.5rem; }
 .stat-item   { text-align: center; }
 .stat-num    { font-family: "Sora", sans-serif; font-size: 2rem; font-weight: 800;
@@ -316,6 +316,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .hero-inner { grid-template-columns: 1fr; padding-bottom: 3.5rem; }
   .hero-visual { display: none; }
   .hero { padding: 4rem 0 0; }
+  .hero::before, .hero::after { display: none; }
   .features-grid { grid-template-columns: 1fr; gap: 2rem; }
   .features-grid.reversed .feat-visual { order: 0; }
   .feat-visual { aspect-ratio: 16/9; }
@@ -326,15 +327,85 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-grid > div:first-child { grid-column: 1 / -1; }
   .float-card { display: none !important; }
+  .stats-inner { grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 2rem 1rem; }
+  .stat-num { font-size: 1.6rem; }
+  .benefits-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
-  .section { padding: 4rem 0; }
-  .feat-separator { padding: 4rem 0; }
+  html { overflow-x: hidden; }
+  .section { padding: 3.5rem 0; }
+  .feat-separator { padding: 3.5rem 0; }
+  .container { padding: 0 1.25rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .hero-social-proof { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
-  .profile-card { flex: 0 0 230px; }
+  .profile-card { flex: 0 0 200px; }
   .profile-img  { height: 200px; }
+  .hero-eyebrow { font-size: 0.7rem; padding: 0.3rem 0.7rem; white-space: normal; line-height: 1.4; text-align: center; }
+  .hero-eyebrow span { display: inline; }
+  .hero h1 { font-size: clamp(1.6rem, 5.5vw, 2rem); }
+  .hero-sub { font-size: 0.88rem; margin-bottom: 1.75rem; }
+  .hero-actions { flex-direction: column; gap: 0.7rem; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+  .features-grid { gap: 2rem; }
+  .feat-visual { aspect-ratio: 3/2; }
+  .feat-content h3 { font-size: 1.25rem; }
+  .feat-content p { font-size: 0.88rem; }
+  .steps-row { gap: 0.75rem; }
+  .step-box { min-width: 130px; padding: 0 0.5rem; }
+  .step-num { width: 44px; height: 44px; font-size: 0.95rem; }
+  .step-box h4 { font-size: 0.85rem; }
+  .step-box p { font-size: 0.75rem; }
+  .benefits-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .benefit-card { padding: 1.25rem; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .testi-card { padding: 1.25rem; }
+  .testi-quote { font-size: 0.85rem; }
+  .cta-section { padding: 4rem 0; }
+  .cta-section h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .cta-section p { font-size: 0.9rem; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 0.5rem; padding: 1.75rem 1rem; }
+  .stat-num { font-size: 1.5rem; }
+  .stat-label { font-size: 0.75rem; }
+}
+@media (max-width: 460px) {
+  .hero { padding: 3rem 0 0; }
+  .hero-inner { padding: 0 1rem; gap: 1.5rem; }
+  .hero h1 { font-size: clamp(1.3rem, 5vw, 1.5rem); }
+  .hero-sub { font-size: 0.82rem; }
+  .profile-card { flex: 0 0 170px; }
+  .profile-img { height: 160px; }
+  .profile-body { padding: 12px 12px 10px; }
+  .profile-name { font-size: 0.85rem; }
+  .profile-role { font-size: 0.72rem; }
+  .features-grid { gap: 1.5rem; }
+  .feat-separator { padding: 3rem 0; }
+  .feat-content h3 { font-size: 1.1rem; }
+  .feat-content p { font-size: 0.82rem; }
+  .benefit-card h4 { font-size: 0.9rem; }
+  .benefit-card p { font-size: 0.8rem; }
+  .section-header h2 { font-size: clamp(1.3rem, 4.5vw, 1.5rem); }
+  .section-header p { font-size: 0.85rem; }
+  .footer { padding: 3rem 0 1.5rem; }
+  .footer-wrap { padding: 0 1rem; }
+  .footer-grid { gap: 1.5rem; }
+  .stat-num { font-size: 1.35rem; }
+  .stat-label { font-size: 0.7rem; }
+}
+@media (max-width: 380px) {
+  .container { padding: 0 0.75rem; }
+  .hero-inner { padding: 0 0.75rem; }
+  .hero h1 { font-size: clamp(1.1rem, 5vw, 1.3rem); }
+  .hero-sub { font-size: 0.78rem; }
+  .hero-eyebrow { font-size: 0.6rem; padding: 0.2rem 0.5rem; }
+  .profile-card { flex: 0 0 85%; }
+  .profile-img { height: 180px; }
+  .carousel-track { gap: 12px; }
+  .carousel-btn { width: 38px; height: 38px; font-size: 16px; }
+  .footer-grid { gap: 1rem; }
+  .f-brand { font-size: 1.1rem; }
+  .marquee-item { font-size: 0.7rem; }
+  .stats-inner { padding: 1.5rem 0.75rem; gap: 1rem 0.25rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
